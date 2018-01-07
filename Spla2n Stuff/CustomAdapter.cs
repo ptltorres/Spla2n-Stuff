@@ -55,7 +55,9 @@ namespace Spla2n_Stuff
             } else if (typeof(T) == typeof(Brand)) {
                 SetUpBrands(position, parent);
             } else if (typeof(T) == typeof(Weapon)) {
-
+                SetUpWeapons(position, parent);
+            } else if (typeof(T) == typeof(SubWeapon)) {
+                SetUpSubWeapons(position, parent);
             }
 
             return view;
@@ -134,6 +136,55 @@ namespace Spla2n_Stuff
 
         public void SetUpWeapons(int position, ViewGroup parent) {
             view = context.LayoutInflater.Inflate(Resource.Layout.Weapon_Layout, parent, false);
+
+            List<Weapon> weapons = items.Cast<Weapon>().ToList();
+
+            string stats = weapons[position].Stats ?? "-/-/-";
+
+            ImageView weaponImage = view.FindViewById<ImageView>(Resource.Id.imageView1);
+            TextView weaponTitle = view.FindViewById<TextView>(Resource.Id.weaponTitle);
+            TextView subTitle = view.FindViewById<TextView>(Resource.Id.subTitle);
+            ImageView subImage = view.FindViewById<ImageView>(Resource.Id.imageSub);
+            TextView subDescription = view.FindViewById<TextView>(Resource.Id.subDescription);
+            TextView specialTitle = view.FindViewById<TextView>(Resource.Id.specialTitle);
+            ImageView specialImage = view.FindViewById<ImageView>(Resource.Id.imageSpecial);
+            TextView specialDescription = view.FindViewById<TextView>(Resource.Id.specialDescription);
+            TextView statsTextView = view.FindViewById<TextView>(Resource.Id.stats);
+
+            weaponImage.SetImageResource(weapons[position].ImageID);
+            weaponTitle.Text = weapons[position].Name;
+            subTitle.Text = weapons[position].WeaponSub.Name;
+            subImage.SetImageResource(weapons[position].WeaponSub.ImageID);
+            subDescription.Text = weapons[position].WeaponSub.Description;
+            specialTitle.Text = weapons[position].WeaponSpecial.Name;
+            specialImage.SetImageResource(weapons[position].WeaponSpecial.ImageID);
+            specialDescription.Text = weapons[position].WeaponSpecial.Description;
+            statsTextView.Text = stats;
+
+            weaponTitle.SetTypeface(typeface, TypefaceStyle.Bold);
+            subTitle.SetTypeface(typeface, TypefaceStyle.Bold);
+            subDescription.SetTypeface(typeface, TypefaceStyle.Normal);
+            specialTitle.SetTypeface(typeface, TypefaceStyle.Bold);
+            specialDescription.SetTypeface(typeface, TypefaceStyle.Normal);
+            statsTextView.SetTypeface(typeface, TypefaceStyle.Normal);
+        }
+
+        public void SetUpSubWeapons(int position, ViewGroup parent) {
+            view = context.LayoutInflater.Inflate(Resource.Layout.Ability_List, parent, false);
+
+            List<SubWeapon> subs = items.Cast<SubWeapon>().ToList();
+
+            ImageView image = view.FindViewById<ImageView>(Resource.Id.imageView1);
+            TextView title = view.FindViewById<TextView>(Resource.Id.abilityTitle);
+            TextView description = view.FindViewById<TextView>(Resource.Id.abilityDescription);
+
+            image.SetImageResource(subs[position].ImageID);
+            title.Text = subs[position].Name;
+            description.Text = subs[position].Description;
+
+            // Setting fonts
+            title.SetTypeface(typeface, TypefaceStyle.Bold);
+            description.SetTypeface(typeface, TypefaceStyle.Normal);
         }
     }
 }

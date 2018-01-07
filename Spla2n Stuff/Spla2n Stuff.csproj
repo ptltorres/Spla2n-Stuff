@@ -98,6 +98,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecialActivity.cs" />
+    <Compile Include="SubWeaponActivity.cs" />
     <Compile Include="WeaponActivity.cs" />
   </ItemGroup>
   <ItemGroup>

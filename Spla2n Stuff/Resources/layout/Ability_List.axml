@@ -41,4 +41,8 @@
                 android:layout_marginLeft="20dp" />
         </LinearLayout>
     </LinearLayout>
+  <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
 </LinearLayout>

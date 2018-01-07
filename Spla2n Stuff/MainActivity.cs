@@ -69,7 +69,7 @@ namespace Spla2n_Stuff
             };
 
             subButton.Click += delegate {
-                //StartActivity(typeof());
+                StartActivity(typeof(SubWeaponActivity));
             };
         }
 
