@@ -58,6 +58,8 @@ namespace Spla2n_Stuff
                 SetUpWeapons(position, parent);
             } else if (typeof(T) == typeof(SubWeapon)) {
                 SetUpSubWeapons(position, parent);
+            } else {
+                SetUpGear(position, parent);
             }
 
             return view;
@@ -185,6 +187,22 @@ namespace Spla2n_Stuff
             // Setting fonts
             title.SetTypeface(typeface, TypefaceStyle.Bold);
             description.SetTypeface(typeface, TypefaceStyle.Normal);
+        }
+
+        public void SetUpGear(int position, ViewGroup parent) {
+            view = context.LayoutInflater.Inflate(Resource.Layout.Gear_Layout, parent, false);
+
+            List<Gear> gear = items.Cast<Gear>().ToList();
+
+            ImageView gearImage = view.FindViewById<ImageView>(Resource.Id.imageView1);
+            TextView gearName = view.FindViewById<TextView>(Resource.Id.gearTitle);
+            ImageView brandImage = view.FindViewById<ImageView>(Resource.Id.imageBrand);
+            TextView brandName = view.FindViewById<TextView>(Resource.Id.brandName);
+
+            gearImage.SetImageResource(gear[position].ImageID);
+            gearName.Text = gear[position].Name;
+            brandImage.SetImageResource(gear[position].GearBrand.ImageID);
+            brandName.Text = gear[position].GearBrand.Name;
         }
     }
 }

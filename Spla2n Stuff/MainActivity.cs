@@ -49,15 +49,21 @@ namespace Spla2n_Stuff
             };
 
             headgearButton.Click += delegate {
-                //StartActivity(typeof());
+                var activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Headgear");
+                StartActivity(activity);
             };
 
             clothingButton.Click += delegate {
-                //StartActivity(typeof());
+                var activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Clothe");
+                StartActivity(activity);
             };
 
             shoesButton.Click += delegate {
-                //StartActivity(typeof());
+                var activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Shoe");
+                StartActivity(activity);
             };
 
             specialsButton.Click += delegate {

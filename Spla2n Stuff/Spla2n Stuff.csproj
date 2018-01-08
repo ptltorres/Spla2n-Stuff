@@ -83,6 +83,7 @@
     <Compile Include="AbilityActivity.cs" />
     <Compile Include="BrandActivity.cs" />
     <Compile Include="CustomAdapter.cs" />
+    <Compile Include="GearActivity.cs" />
     <Compile Include="GearTypes\Ability.cs" />
     <Compile Include="GearTypes\Brand.cs" />
     <Compile Include="GearTypes\Clothe.cs" />
@@ -103,8 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Paintball.ttf" />
-    <AndroidAsset Include="Assets\Spla2n.db" />
     <AndroidAsset Include="Assets\HelveticaNeue.ttf" />
+    <AndroidAsset Include="Assets\Spla2n.db" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
@@ -125,6 +126,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Weapon_Layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Gear_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -1172,6 +1176,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\tentatek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\straping_whites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo_aloha_shirt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\white_anchor_tee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

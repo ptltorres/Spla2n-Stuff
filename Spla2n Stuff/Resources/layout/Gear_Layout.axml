@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -20,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/brandTitle"
+                android:id="@+id/gearTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title Goes Here"
@@ -28,20 +30,23 @@
                 android:layout_marginLeft="20dp"
                 android:textAllCaps="false"
                 android:textStyle="bold"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_marginBottom="8dp" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp">
                 <TextView
-                    android:id="@+id/commonTitle"
+                    android:id="@+id/brandTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Common Ability"
+                    android:text="Brand"
                     android:textColor="#000000"
                     android:layout_marginLeft="20dp"
                     android:textAllCaps="false"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="16dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -51,46 +56,13 @@
                     android:src="@android:drawable/ic_menu_gallery"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:id="@+id/imageCommon"
+                    android:id="@+id/imageBrand"
                     android:layout_marginLeft="20dp" />
                 <TextView
-                    android:id="@+id/commonDescription"
+                    android:id="@+id/brandName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" "
-                    android:textColor="#000000"
-                    android:textAllCaps="false"
-                    android:layout_marginLeft="5dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/uncommonTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Uncommon Ability"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp"
-                    android:textAllCaps="false"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@android:drawable/ic_menu_gallery"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/imageUncommon"
-                    android:layout_marginLeft="20dp" />
-                <TextView
-                    android:id="@+id/uncommonDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" "
+                    android:text="Brand Name"
                     android:textColor="#000000"
                     android:textAllCaps="false"
                     android:layout_marginLeft="5dp" />
