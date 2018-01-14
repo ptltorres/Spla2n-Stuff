@@ -77,8 +77,9 @@ namespace Spla2n_Stuff
             subButton.Click += delegate {
                 StartActivity(typeof(SubWeaponActivity));
             };
+           
         }
-
+        
         private void CopyDatabase(string dataBaseName) {
             var dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dataBaseName);
 
