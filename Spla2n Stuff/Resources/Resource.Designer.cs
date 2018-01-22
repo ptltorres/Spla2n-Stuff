@@ -33,37 +33,73 @@ namespace Spla2n_Stuff
 		{
 			
 			// aapt resource value: 0x7f010000
-			public const int cardBackgroundColor = 2130771968;
+			public const int adSize = 2130771968;
 			
 			// aapt resource value: 0x7f010001
-			public const int cardCornerRadius = 2130771969;
+			public const int adSizes = 2130771969;
 			
 			// aapt resource value: 0x7f010002
-			public const int cardElevation = 2130771970;
+			public const int adUnitId = 2130771970;
 			
 			// aapt resource value: 0x7f010003
-			public const int cardMaxElevation = 2130771971;
-			
-			// aapt resource value: 0x7f010005
-			public const int cardPreventCornerOverlap = 2130771973;
+			public const int cardBackgroundColor = 2130771971;
 			
 			// aapt resource value: 0x7f010004
-			public const int cardUseCompatPadding = 2130771972;
+			public const int cardCornerRadius = 2130771972;
+			
+			// aapt resource value: 0x7f010005
+			public const int cardElevation = 2130771973;
 			
 			// aapt resource value: 0x7f010006
-			public const int contentPadding = 2130771974;
-			
-			// aapt resource value: 0x7f01000a
-			public const int contentPaddingBottom = 2130771978;
-			
-			// aapt resource value: 0x7f010007
-			public const int contentPaddingLeft = 2130771975;
+			public const int cardMaxElevation = 2130771974;
 			
 			// aapt resource value: 0x7f010008
-			public const int contentPaddingRight = 2130771976;
+			public const int cardPreventCornerOverlap = 2130771976;
+			
+			// aapt resource value: 0x7f010007
+			public const int cardUseCompatPadding = 2130771975;
 			
 			// aapt resource value: 0x7f010009
-			public const int contentPaddingTop = 2130771977;
+			public const int contentPadding = 2130771977;
+			
+			// aapt resource value: 0x7f01000d
+			public const int contentPaddingBottom = 2130771981;
+			
+			// aapt resource value: 0x7f01000a
+			public const int contentPaddingLeft = 2130771978;
+			
+			// aapt resource value: 0x7f01000b
+			public const int contentPaddingRight = 2130771979;
+			
+			// aapt resource value: 0x7f01000c
+			public const int contentPaddingTop = 2130771980;
+			
+			// aapt resource value: 0x7f010015
+			public const int font = 2130771989;
+			
+			// aapt resource value: 0x7f01000e
+			public const int fontProviderAuthority = 2130771982;
+			
+			// aapt resource value: 0x7f010011
+			public const int fontProviderCerts = 2130771985;
+			
+			// aapt resource value: 0x7f010012
+			public const int fontProviderFetchStrategy = 2130771986;
+			
+			// aapt resource value: 0x7f010013
+			public const int fontProviderFetchTimeout = 2130771987;
+			
+			// aapt resource value: 0x7f01000f
+			public const int fontProviderPackage = 2130771983;
+			
+			// aapt resource value: 0x7f010010
+			public const int fontProviderQuery = 2130771984;
+			
+			// aapt resource value: 0x7f010014
+			public const int fontStyle = 2130771988;
+			
+			// aapt resource value: 0x7f010016
+			public const int fontWeight = 2130771990;
 			
 			static Attribute()
 			{
@@ -75,23 +111,60 @@ namespace Spla2n_Stuff
 			}
 		}
 		
+		public partial class Boolean
+		{
+			
+			// aapt resource value: 0x7f0a0000
+			public const int abc_action_bar_embed_tabs = 2131361792;
+			
+			static Boolean()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Boolean()
+			{
+			}
+		}
+		
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int cardview_dark_background = 2131099648;
+			// aapt resource value: 0x7f080000
+			public const int cardview_dark_background = 2131230720;
 			
-			// aapt resource value: 0x7f060001
-			public const int cardview_light_background = 2131099649;
+			// aapt resource value: 0x7f080001
+			public const int cardview_light_background = 2131230721;
 			
-			// aapt resource value: 0x7f060002
-			public const int cardview_shadow_end_color = 2131099650;
+			// aapt resource value: 0x7f080002
+			public const int cardview_shadow_end_color = 2131230722;
 			
-			// aapt resource value: 0x7f060003
-			public const int cardview_shadow_start_color = 2131099651;
+			// aapt resource value: 0x7f080003
+			public const int cardview_shadow_start_color = 2131230723;
 			
-			// aapt resource value: 0x7f060004
-			public const int theme_devicedefault_background = 2131099652;
+			// aapt resource value: 0x7f080007
+			public const int notification_action_color_filter = 2131230727;
+			
+			// aapt resource value: 0x7f080008
+			public const int notification_icon_bg_color = 2131230728;
+			
+			// aapt resource value: 0x7f080004
+			public const int notification_material_background_media_default_color = 2131230724;
+			
+			// aapt resource value: 0x7f080005
+			public const int primary_text_default_material_dark = 2131230725;
+			
+			// aapt resource value: 0x7f080009
+			public const int ripple_material_light = 2131230729;
+			
+			// aapt resource value: 0x7f080006
+			public const int secondary_text_default_material_dark = 2131230726;
+			
+			// aapt resource value: 0x7f08000a
+			public const int secondary_text_default_material_light = 2131230730;
+			
+			// aapt resource value: 0x7f08000b
+			public const int theme_devicedefault_background = 2131230731;
 			
 			static Color()
 			{
@@ -106,14 +179,74 @@ namespace Spla2n_Stuff
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int cardview_compat_inset_shadow = 2131165184;
+			// aapt resource value: 0x7f090000
+			public const int cardview_compat_inset_shadow = 2131296256;
 			
-			// aapt resource value: 0x7f070001
-			public const int cardview_default_elevation = 2131165185;
+			// aapt resource value: 0x7f090001
+			public const int cardview_default_elevation = 2131296257;
 			
-			// aapt resource value: 0x7f070002
-			public const int cardview_default_radius = 2131165186;
+			// aapt resource value: 0x7f090002
+			public const int cardview_default_radius = 2131296258;
+			
+			// aapt resource value: 0x7f090007
+			public const int compat_button_inset_horizontal_material = 2131296263;
+			
+			// aapt resource value: 0x7f090008
+			public const int compat_button_inset_vertical_material = 2131296264;
+			
+			// aapt resource value: 0x7f090009
+			public const int compat_button_padding_horizontal_material = 2131296265;
+			
+			// aapt resource value: 0x7f09000a
+			public const int compat_button_padding_vertical_material = 2131296266;
+			
+			// aapt resource value: 0x7f09000b
+			public const int compat_control_corner_material = 2131296267;
+			
+			// aapt resource value: 0x7f09000c
+			public const int notification_action_icon_size = 2131296268;
+			
+			// aapt resource value: 0x7f09000d
+			public const int notification_action_text_size = 2131296269;
+			
+			// aapt resource value: 0x7f09000e
+			public const int notification_big_circle_margin = 2131296270;
+			
+			// aapt resource value: 0x7f090004
+			public const int notification_content_margin_start = 2131296260;
+			
+			// aapt resource value: 0x7f09000f
+			public const int notification_large_icon_height = 2131296271;
+			
+			// aapt resource value: 0x7f090010
+			public const int notification_large_icon_width = 2131296272;
+			
+			// aapt resource value: 0x7f090005
+			public const int notification_main_column_padding_top = 2131296261;
+			
+			// aapt resource value: 0x7f090006
+			public const int notification_media_narrow_margin = 2131296262;
+			
+			// aapt resource value: 0x7f090011
+			public const int notification_right_icon_size = 2131296273;
+			
+			// aapt resource value: 0x7f090003
+			public const int notification_right_side_padding_top = 2131296259;
+			
+			// aapt resource value: 0x7f090012
+			public const int notification_small_icon_background_padding = 2131296274;
+			
+			// aapt resource value: 0x7f090013
+			public const int notification_small_icon_size_as_large = 2131296275;
+			
+			// aapt resource value: 0x7f090014
+			public const int notification_subtext_size = 2131296276;
+			
+			// aapt resource value: 0x7f090015
+			public const int notification_top_pad = 2131296277;
+			
+			// aapt resource value: 0x7f090016
+			public const int notification_top_pad_large_text = 2131296278;
 			
 			static Dimension()
 			{
@@ -717,508 +850,544 @@ namespace Spla2n_Stuff
 			public const int noise_cancelers = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int object_shredder = 2130837700;
+			public const int notification_action_background = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int octobowler_shirt = 2130837701;
+			public const int notification_bg = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int octobrush = 2130837702;
+			public const int notification_bg_low = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int opening_gambit = 2130837703;
+			public const int notification_bg_low_normal = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int orange_arrows = 2130837704;
+			public const int notification_bg_low_pressed = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int orca_hi_tops = 2130837705;
+			public const int notification_bg_normal = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int oyster_clogs = 2130837706;
+			public const int notification_bg_normal_pressed = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int paintball_mask = 2130837707;
+			public const int notification_icon_background = 2130837707;
+			
+			// aapt resource value: 0x7f020176
+			public const int notification_template_icon_bg = 2130837878;
+			
+			// aapt resource value: 0x7f020177
+			public const int notification_template_icon_low_bg = 2130837879;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int painter_s_mask = 2130837708;
+			public const int notification_tile_bg = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int patched_hat = 2130837709;
+			public const int notify_panel_notification_icon_bg = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int pilot_goggles = 2130837710;
+			public const int object_shredder = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int pink_easy_stripe_shirt = 2130837711;
+			public const int octobowler_shirt = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int pink_trainers = 2130837712;
+			public const int octobrush = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int piranha_moccasins = 2130837713;
+			public const int opening_gambit = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int plum_casuals = 2130837714;
+			public const int orange_arrows = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int point_sensor = 2130837715;
+			public const int orca_hi_tops = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int port_mackerel = 2130837716;
+			public const int oyster_clogs = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int positive_longcuff_sweater = 2130837717;
+			public const int paintball_mask = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int power_armor = 2130837718;
+			public const int painter_s_mask = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int power_armor_mk_i = 2130837719;
+			public const int patched_hat = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int power_boots = 2130837720;
+			public const int pilot_goggles = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int power_boots_mk_i = 2130837721;
+			public const int pink_easy_stripe_shirt = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int power_mask = 2130837722;
+			public const int pink_trainers = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int power_mask_mk_i = 2130837723;
+			public const int piranha_moccasins = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int pro_trail_boots = 2130837724;
+			public const int plum_casuals = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int prune_parashooter = 2130837725;
+			public const int point_sensor = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int pullover_coat = 2130837726;
+			public const int port_mackerel = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int punk_blacks = 2130837727;
+			public const int positive_longcuff_sweater = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int punk_whites = 2130837728;
+			public const int power_armor = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int purple_camo_ls = 2130837729;
+			public const int power_armor_mk_i = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int purple_hi_horses = 2130837730;
+			public const int power_boots = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int purple_sea_slugs = 2130837731;
+			public const int power_boots_mk_i = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int quick_respawn = 2130837732;
+			public const int power_mask = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int quick_super_jump = 2130837733;
+			public const int power_mask_mk_i = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int rapid_blaster = 2130837734;
+			public const int pro_trail_boots = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int red___black_squidkid_iv = 2130837735;
+			public const int prune_parashooter = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int red_hi_horses = 2130837736;
+			public const int pullover_coat = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int red_mesh_sneakers = 2130837737;
+			public const int punk_blacks = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int red_tentatek_tee = 2130837738;
+			public const int punk_whites = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int red_v_neck_limited_tee = 2130837739;
+			public const int purple_camo_ls = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int red_vector_tee = 2130837740;
+			public const int purple_hi_horses = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int reel_sweat = 2130837741;
+			public const int purple_sea_slugs = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int respawn_punisher = 2130837742;
+			public const int quick_respawn = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int retro_specs = 2130837743;
+			public const int quick_super_jump = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int retro_sweat = 2130837744;
+			public const int rapid_blaster = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int roasted_brogues = 2130837745;
+			public const int red___black_squidkid_iv = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int rockenberg = 2130837746;
+			public const int red_hi_horses = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int run_speed_up = 2130837747;
+			public const int red_mesh_sneakers = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int safari_hat = 2130837748;
+			public const int red_tentatek_tee = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int sailor_stripe_tee = 2130837749;
+			public const int red_v_neck_limited_tee = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int samurai_helmet = 2130837750;
+			public const int red_vector_tee = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int samurai_jacket = 2130837751;
+			public const int reel_sweat = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int samurai_shoes = 2130837752;
+			public const int respawn_punisher = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int school_cardigan = 2130837753;
+			public const int retro_specs = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int school_shoes = 2130837754;
+			public const int retro_sweat = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int school_uniform = 2130837755;
+			public const int roasted_brogues = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int shellendorf_institute = 2130837756;
+			public const int rockenberg = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int shifty_station = 2130837757;
+			public const int run_speed_up = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int shirt___tie = 2130837758;
+			public const int safari_hat = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int shirt_with_blue_hoodie = 2130837759;
+			public const int sailor_stripe_tee = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int short_knit_layers = 2130837760;
+			public const int samurai_helmet = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int shrimp_pink_polo = 2130837761;
+			public const int samurai_jacket = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int skalop = 2130837762;
+			public const int samurai_shoes = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int skull_bandana = 2130837763;
+			public const int school_cardigan = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int slash_king_tank = 2130837764;
+			public const int school_shoes = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int slipstream_united = 2130837765;
+			public const int school_uniform = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int slosher = 2130837766;
+			public const int shellendorf_institute = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int smoky_wingtips = 2130837767;
+			public const int shifty_station = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int snapper_canal = 2130837768;
+			public const int shirt___tie = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int snorkel_mask = 2130837769;
+			public const int shirt_with_blue_hoodie = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int snow_delta_straps = 2130837770;
+			public const int short_knit_layers = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int soccer_headband = 2130837771;
+			public const int shrimp_pink_polo = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int special_charge_up = 2130837772;
+			public const int skalop = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int special_forces_beret = 2130837773;
+			public const int skull_bandana = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int special_power_up = 2130837774;
+			public const int slash_king_tank = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int special_saver = 2130837775;
+			public const int slipstream_united = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int splash_mob = 2130837776;
+			public const int slosher = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int splash_o_matic = 2130837777;
+			public const int smoky_wingtips = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int splash_wall = 2130837778;
+			public const int snapper_canal = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int splashdown = 2130837779;
+			public const int snorkel_mask = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int splat_bomb = 2130837780;
+			public const int snow_delta_straps = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int splat_brella = 2130837781;
+			public const int soccer_headband = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int splat_charger = 2130837782;
+			public const int special_charge_up = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int splat_dualies = 2130837783;
+			public const int special_forces_beret = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int splat_roller = 2130837784;
+			public const int special_power_up = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int splatfest_tee = 2130837785;
+			public const int special_saver = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int splatterscope = 2130837786;
+			public const int splash_mob = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int splattershot = 2130837787;
+			public const int splash_o_matic = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int splattershot_jr_ = 2130837788;
+			public const int splash_wall = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int splattershot_pro = 2130837789;
+			public const int splashdown = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int sploosh_o_matic = 2130837790;
+			public const int splat_bomb = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int sprinkler = 2130837791;
+			public const int splat_brella = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int squash_headband = 2130837792;
+			public const int splat_charger = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int squid_beakon = 2130837793;
+			public const int splat_dualies = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int squid_clip_ons = 2130837794;
+			public const int splat_roller = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int squid_facemask = 2130837795;
+			public const int splatfest_tee = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int squid_hairclip = 2130837796;
+			public const int splatterscope = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int squid_satin_jacket = 2130837797;
+			public const int splattershot = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int squid_squad_band_tee = 2130837798;
+			public const int splattershot_jr_ = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int squiddor_polo = 2130837799;
+			public const int splattershot_pro = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int squidfin_hook_cans = 2130837800;
+			public const int sploosh_o_matic = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int squidforce = 2130837801;
+			public const int sprinkler = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int squidvader_cap = 2130837802;
+			public const int squash_headband = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int squinja_boots = 2130837803;
+			public const int squid_beakon = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int squinja_mask = 2130837804;
+			public const int squid_clip_ons = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int squinja_suit = 2130837805;
+			public const int squid_facemask = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int starfish_mainstage = 2130837806;
+			public const int squid_hairclip = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int stealth_jump = 2130837807;
+			public const int squid_satin_jacket = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int sting_ray = 2130837808;
+			public const int squid_squad_band_tee = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int straping_whites = 2130837809;
+			public const int squiddor_polo = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int strapping_reds = 2130837810;
+			public const int squidfin_hook_cans = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int straw_boater = 2130837811;
+			public const int squidforce = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int striped_beanie = 2130837812;
+			public const int squidvader_cap = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int studio_headphones = 2130837813;
+			public const int squinja_boots = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int sturgeon_shipyard = 2130837814;
+			public const int squinja_mask = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int sub_power_up = 2130837815;
+			public const int squinja_suit = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int suction_bomb = 2130837816;
+			public const int starfish_mainstage = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int sun_visor = 2130837817;
+			public const int stealth_jump = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int sunny_climbing_shoes = 2130837818;
+			public const int sting_ray = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int sunny_day_tee = 2130837819;
+			public const int straping_whites = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int sunset_orca_hi_tops = 2130837820;
+			public const int strapping_reds = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int swim_speed_up = 2130837821;
+			public const int straw_boater = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int takoroka = 2130837822;
+			public const int striped_beanie = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int takoroka_mesh = 2130837823;
+			public const int studio_headphones = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int takoroka_visor = 2130837824;
+			public const int sturgeon_shipyard = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int takoroka_windcrusher = 2130837825;
+			public const int sub_power_up = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int tenacity = 2130837826;
+			public const int suction_bomb = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int tennis_headband = 2130837827;
+			public const int sun_visor = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int tenta_missiles = 2130837828;
+			public const int sunny_climbing_shoes = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int tentatek = 2130837829;
+			public const int sunny_day_tee = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int tentatek_splattershot = 2130837830;
+			public const int sunset_orca_hi_tops = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int the_reef = 2130837831;
+			public const int swim_speed_up = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int thermal_ink = 2130837832;
+			public const int takoroka = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int tinted_shades = 2130837833;
+			public const int takoroka_mesh = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int toni_kensa = 2130837834;
+			public const int takoroka_visor = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int toxic_mist = 2130837835;
+			public const int takoroka_windcrusher = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int trail_boots = 2130837836;
+			public const int tenacity = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int tri_slosher = 2130837837;
+			public const int tennis_headband = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int urchins_cap = 2130837838;
+			public const int tenta_missiles = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int urchins_jersey = 2130837839;
+			public const int tentatek = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int varsity_jacket = 2130837840;
+			public const int tentatek_splattershot = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int vintage_check_shirt = 2130837841;
+			public const int the_reef = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int visor_skate_helmet = 2130837842;
+			public const int thermal_ink = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int walleye_warehouse = 2130837843;
+			public const int tinted_shades = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int wet_floor_band_tee = 2130837844;
+			public const int toni_kensa = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int white_8_bit_fishfry = 2130837845;
+			public const int toxic_mist = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int white_anchor_tee = 2130837846;
+			public const int trail_boots = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int white_baseball_ls = 2130837847;
+			public const int tri_slosher = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int white_deca_logo_tee = 2130837848;
+			public const int urchins_cap = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int white_headband = 2130837849;
+			public const int urchins_jersey = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int white_inky_rider = 2130837850;
+			public const int varsity_jacket = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int white_kicks = 2130837851;
+			public const int vintage_check_shirt = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int white_king_tank = 2130837852;
+			public const int visor_skate_helmet = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int white_norimaki_750s = 2130837853;
+			public const int walleye_warehouse = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int white_seahorses = 2130837854;
+			public const int wet_floor_band_tee = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int white_tee = 2130837855;
+			public const int white_8_bit_fishfry = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int white_urchin_rock_tee = 2130837856;
+			public const int white_anchor_tee = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int white_v_neck_tee = 2130837857;
+			public const int white_baseball_ls = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int yellow_layered_ls = 2130837858;
+			public const int white_deca_logo_tee = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int yellow_mesh_sneakers = 2130837859;
+			public const int white_headband = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int yellow_urban_vest = 2130837860;
+			public const int white_inky_rider = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int zekko = 2130837861;
+			public const int white_kicks = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int zekko_baseball_ls = 2130837862;
+			public const int white_king_tank = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int zekko_hoodie = 2130837863;
+			public const int white_norimaki_750s = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int zekko_jade_coat = 2130837864;
+			public const int white_seahorses = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int zekko_redleaf_coat = 2130837865;
+			public const int white_tee = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int zink = 2130837866;
+			public const int white_urchin_rock_tee = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int zink_layered_ls = 2130837867;
+			public const int white_v_neck_tee = 2130837867;
+			
+			// aapt resource value: 0x7f02016c
+			public const int yellow_layered_ls = 2130837868;
+			
+			// aapt resource value: 0x7f02016d
+			public const int yellow_mesh_sneakers = 2130837869;
+			
+			// aapt resource value: 0x7f02016e
+			public const int yellow_urban_vest = 2130837870;
+			
+			// aapt resource value: 0x7f02016f
+			public const int zekko = 2130837871;
+			
+			// aapt resource value: 0x7f020170
+			public const int zekko_baseball_ls = 2130837872;
+			
+			// aapt resource value: 0x7f020171
+			public const int zekko_hoodie = 2130837873;
+			
+			// aapt resource value: 0x7f020172
+			public const int zekko_jade_coat = 2130837874;
+			
+			// aapt resource value: 0x7f020173
+			public const int zekko_redleaf_coat = 2130837875;
+			
+			// aapt resource value: 0x7f020174
+			public const int zink = 2130837876;
+			
+			// aapt resource value: 0x7f020175
+			public const int zink_layered_ls = 2130837877;
 			
 			static Drawable()
 			{
@@ -1233,149 +1402,242 @@ namespace Spla2n_Stuff
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090020
-			public const int abilityButton = 2131296288;
+			// aapt resource value: 0x7f0b002b
+			public const int abilityButton = 2131427371;
 			
-			// aapt resource value: 0x7f090003
-			public const int abilityDescription = 2131296259;
+			// aapt resource value: 0x7f0b000d
+			public const int abilityDescription = 2131427341;
 			
-			// aapt resource value: 0x7f090000
-			public const int abilityListView = 2131296256;
+			// aapt resource value: 0x7f0b000a
+			public const int abilityListView = 2131427338;
 			
-			// aapt resource value: 0x7f090002
-			public const int abilityTitle = 2131296258;
+			// aapt resource value: 0x7f0b000c
+			public const int abilityTitle = 2131427340;
 			
-			// aapt resource value: 0x7f090021
-			public const int brandButton = 2131296289;
+			// aapt resource value: 0x7f0b0036
+			public const int action0 = 2131427382;
 			
-			// aapt resource value: 0x7f09000d
-			public const int brandName = 2131296269;
+			// aapt resource value: 0x7f0b0033
+			public const int action_container = 2131427379;
 			
-			// aapt resource value: 0x7f090004
-			public const int brandTitle = 2131296260;
+			// aapt resource value: 0x7f0b003a
+			public const int action_divider = 2131427386;
 			
-			// aapt resource value: 0x7f090023
-			public const int clothingButton = 2131296291;
+			// aapt resource value: 0x7f0b0034
+			public const int action_image = 2131427380;
 			
-			// aapt resource value: 0x7f090007
-			public const int commonDescription = 2131296263;
+			// aapt resource value: 0x7f0b0035
+			public const int action_text = 2131427381;
 			
-			// aapt resource value: 0x7f090005
-			public const int commonTitle = 2131296261;
+			// aapt resource value: 0x7f0b0044
+			public const int actions = 2131427396;
 			
-			// aapt resource value: 0x7f09000b
-			public const int gearTitle = 2131296267;
+			// aapt resource value: 0x7f0b002a
+			public const int adView = 2131427370;
 			
-			// aapt resource value: 0x7f090022
-			public const int headgearButton = 2131296290;
+			// aapt resource value: 0x7f0b0005
+			public const int async = 2131427333;
 			
-			// aapt resource value: 0x7f09000c
-			public const int imageBrand = 2131296268;
+			// aapt resource value: 0x7f0b0006
+			public const int blocking = 2131427334;
 			
-			// aapt resource value: 0x7f090006
-			public const int imageCommon = 2131296262;
+			// aapt resource value: 0x7f0b002c
+			public const int brandButton = 2131427372;
 			
-			// aapt resource value: 0x7f09002d
-			public const int imageSpecial = 2131296301;
+			// aapt resource value: 0x7f0b0017
+			public const int brandName = 2131427351;
 			
-			// aapt resource value: 0x7f09002a
-			public const int imageSub = 2131296298;
+			// aapt resource value: 0x7f0b000e
+			public const int brandTitle = 2131427342;
 			
-			// aapt resource value: 0x7f090009
-			public const int imageUncommon = 2131296265;
+			// aapt resource value: 0x7f0b0037
+			public const int cancel_action = 2131427383;
 			
-			// aapt resource value: 0x7f090001
-			public const int imageView1 = 2131296257;
+			// aapt resource value: 0x7f0b003f
+			public const int chronometer = 2131427391;
 			
-			// aapt resource value: 0x7f09001e
-			public const int league1Image = 2131296286;
+			// aapt resource value: 0x7f0b002e
+			public const int clothingButton = 2131427374;
 			
-			// aapt resource value: 0x7f09001c
-			public const int league1Name = 2131296284;
+			// aapt resource value: 0x7f0b0011
+			public const int commonDescription = 2131427345;
 			
-			// aapt resource value: 0x7f09001f
-			public const int league2Image = 2131296287;
+			// aapt resource value: 0x7f0b000f
+			public const int commonTitle = 2131427343;
 			
-			// aapt resource value: 0x7f09001d
-			public const int league2Name = 2131296285;
+			// aapt resource value: 0x7f0b0046
+			public const int end_padder = 2131427398;
 			
-			// aapt resource value: 0x7f09001b
-			public const int leagueModeDesc = 2131296283;
+			// aapt resource value: 0x7f0b0007
+			public const int forever = 2131427335;
 			
-			// aapt resource value: 0x7f09001a
-			public const int leagueModeTitle = 2131296282;
+			// aapt resource value: 0x7f0b0015
+			public const int gearTitle = 2131427349;
 			
-			// aapt resource value: 0x7f090018
-			public const int ranked1Image = 2131296280;
+			// aapt resource value: 0x7f0b002d
+			public const int headgearButton = 2131427373;
 			
-			// aapt resource value: 0x7f090016
-			public const int ranked1Name = 2131296278;
+			// aapt resource value: 0x7f0b0041
+			public const int icon = 2131427393;
 			
-			// aapt resource value: 0x7f090019
-			public const int ranked2Image = 2131296281;
+			// aapt resource value: 0x7f0b0045
+			public const int icon_group = 2131427397;
 			
-			// aapt resource value: 0x7f090017
-			public const int ranked2Name = 2131296279;
+			// aapt resource value: 0x7f0b0016
+			public const int imageBrand = 2131427350;
 			
-			// aapt resource value: 0x7f090015
-			public const int rankedModeDesc = 2131296277;
+			// aapt resource value: 0x7f0b0010
+			public const int imageCommon = 2131427344;
 			
-			// aapt resource value: 0x7f090014
-			public const int rankedModeTitle = 2131296276;
+			// aapt resource value: 0x7f0b004c
+			public const int imageSpecial = 2131427404;
 			
-			// aapt resource value: 0x7f090012
-			public const int regular1Image = 2131296274;
+			// aapt resource value: 0x7f0b0049
+			public const int imageSub = 2131427401;
 			
-			// aapt resource value: 0x7f090010
-			public const int regular1Name = 2131296272;
+			// aapt resource value: 0x7f0b0013
+			public const int imageUncommon = 2131427347;
 			
-			// aapt resource value: 0x7f090013
-			public const int regular2Image = 2131296275;
+			// aapt resource value: 0x7f0b000b
+			public const int imageView1 = 2131427339;
 			
-			// aapt resource value: 0x7f090011
-			public const int regular2Name = 2131296273;
+			// aapt resource value: 0x7f0b0040
+			public const int info = 2131427392;
 			
-			// aapt resource value: 0x7f09000f
-			public const int regularModeDesc = 2131296271;
+			// aapt resource value: 0x7f0b0008
+			public const int italic = 2131427336;
 			
-			// aapt resource value: 0x7f09000e
-			public const int regularModeTitle = 2131296270;
+			// aapt resource value: 0x7f0b0028
+			public const int league1Image = 2131427368;
 			
-			// aapt resource value: 0x7f090024
-			public const int shoesButton = 2131296292;
+			// aapt resource value: 0x7f0b0026
+			public const int league1Name = 2131427366;
 			
-			// aapt resource value: 0x7f09002e
-			public const int specialDescription = 2131296302;
+			// aapt resource value: 0x7f0b0029
+			public const int league2Image = 2131427369;
 			
-			// aapt resource value: 0x7f09002c
-			public const int specialTitle = 2131296300;
+			// aapt resource value: 0x7f0b0027
+			public const int league2Name = 2131427367;
 			
-			// aapt resource value: 0x7f090025
-			public const int specialsButton = 2131296293;
+			// aapt resource value: 0x7f0b0025
+			public const int leagueModeDesc = 2131427365;
 			
-			// aapt resource value: 0x7f09002f
-			public const int stats = 2131296303;
+			// aapt resource value: 0x7f0b0024
+			public const int leagueModeTitle = 2131427364;
 			
-			// aapt resource value: 0x7f090027
-			public const int subButton = 2131296295;
+			// aapt resource value: 0x7f0b0000
+			public const int line1 = 2131427328;
 			
-			// aapt resource value: 0x7f09002b
-			public const int subDescription = 2131296299;
+			// aapt resource value: 0x7f0b0001
+			public const int line3 = 2131427329;
 			
-			// aapt resource value: 0x7f090029
-			public const int subTitle = 2131296297;
+			// aapt resource value: 0x7f0b0039
+			public const int media_actions = 2131427385;
 			
-			// aapt resource value: 0x7f09000a
-			public const int uncommonDescription = 2131296266;
+			// aapt resource value: 0x7f0b0009
+			public const int normal = 2131427337;
 			
-			// aapt resource value: 0x7f090008
-			public const int uncommonTitle = 2131296264;
+			// aapt resource value: 0x7f0b0043
+			public const int notification_background = 2131427395;
 			
-			// aapt resource value: 0x7f090028
-			public const int weaponTitle = 2131296296;
+			// aapt resource value: 0x7f0b003c
+			public const int notification_main_column = 2131427388;
 			
-			// aapt resource value: 0x7f090026
-			public const int weaponsButton = 2131296294;
+			// aapt resource value: 0x7f0b003b
+			public const int notification_main_column_container = 2131427387;
+			
+			// aapt resource value: 0x7f0b0022
+			public const int ranked1Image = 2131427362;
+			
+			// aapt resource value: 0x7f0b0020
+			public const int ranked1Name = 2131427360;
+			
+			// aapt resource value: 0x7f0b0023
+			public const int ranked2Image = 2131427363;
+			
+			// aapt resource value: 0x7f0b0021
+			public const int ranked2Name = 2131427361;
+			
+			// aapt resource value: 0x7f0b001f
+			public const int rankedModeDesc = 2131427359;
+			
+			// aapt resource value: 0x7f0b001e
+			public const int rankedModeTitle = 2131427358;
+			
+			// aapt resource value: 0x7f0b001c
+			public const int regular1Image = 2131427356;
+			
+			// aapt resource value: 0x7f0b001a
+			public const int regular1Name = 2131427354;
+			
+			// aapt resource value: 0x7f0b001d
+			public const int regular2Image = 2131427357;
+			
+			// aapt resource value: 0x7f0b001b
+			public const int regular2Name = 2131427355;
+			
+			// aapt resource value: 0x7f0b0019
+			public const int regularModeDesc = 2131427353;
+			
+			// aapt resource value: 0x7f0b0018
+			public const int regularModeTitle = 2131427352;
+			
+			// aapt resource value: 0x7f0b0042
+			public const int right_icon = 2131427394;
+			
+			// aapt resource value: 0x7f0b003d
+			public const int right_side = 2131427389;
+			
+			// aapt resource value: 0x7f0b002f
+			public const int shoesButton = 2131427375;
+			
+			// aapt resource value: 0x7f0b004d
+			public const int specialDescription = 2131427405;
+			
+			// aapt resource value: 0x7f0b004b
+			public const int specialTitle = 2131427403;
+			
+			// aapt resource value: 0x7f0b0030
+			public const int specialsButton = 2131427376;
+			
+			// aapt resource value: 0x7f0b004e
+			public const int stats = 2131427406;
+			
+			// aapt resource value: 0x7f0b0038
+			public const int status_bar_latest_event_content = 2131427384;
+			
+			// aapt resource value: 0x7f0b0032
+			public const int subButton = 2131427378;
+			
+			// aapt resource value: 0x7f0b004a
+			public const int subDescription = 2131427402;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int subTitle = 2131427400;
+			
+			// aapt resource value: 0x7f0b0002
+			public const int text = 2131427330;
+			
+			// aapt resource value: 0x7f0b0003
+			public const int text2 = 2131427331;
+			
+			// aapt resource value: 0x7f0b003e
+			public const int time = 2131427390;
+			
+			// aapt resource value: 0x7f0b0004
+			public const int title = 2131427332;
+			
+			// aapt resource value: 0x7f0b0014
+			public const int uncommonDescription = 2131427348;
+			
+			// aapt resource value: 0x7f0b0012
+			public const int uncommonTitle = 2131427346;
+			
+			// aapt resource value: 0x7f0b0047
+			public const int weaponTitle = 2131427399;
+			
+			// aapt resource value: 0x7f0b0031
+			public const int weaponsButton = 2131427377;
 			
 			static Id()
 			{
@@ -1383,6 +1645,28 @@ namespace Spla2n_Stuff
 			}
 			
 			private Id()
+			{
+			}
+		}
+		
+		public partial class Integer
+		{
+			
+			// aapt resource value: 0x7f050001
+			public const int cancel_button_image_alpha = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int google_play_services_version = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int status_bar_notification_info_maxnum = 2131034114;
+			
+			static Integer()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Integer()
 			{
 			}
 		}
@@ -1406,7 +1690,52 @@ namespace Spla2n_Stuff
 			public const int Main = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int Weapon_Layout = 2130968581;
+			public const int notification_action = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int notification_action_tombstone = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int notification_media_action = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int notification_media_cancel_action = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int notification_template_big_media = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int notification_template_big_media_custom = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int notification_template_big_media_narrow = 2130968587;
+			
+			// aapt resource value: 0x7f04000c
+			public const int notification_template_big_media_narrow_custom = 2130968588;
+			
+			// aapt resource value: 0x7f04000d
+			public const int notification_template_custom_big = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int notification_template_icon_group = 2130968590;
+			
+			// aapt resource value: 0x7f04000f
+			public const int notification_template_lines_media = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int notification_template_media = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int notification_template_media_custom = 2130968593;
+			
+			// aapt resource value: 0x7f040012
+			public const int notification_template_part_chronometer = 2130968594;
+			
+			// aapt resource value: 0x7f040013
+			public const int notification_template_part_time = 2130968595;
+			
+			// aapt resource value: 0x7f040014
+			public const int Weapon_Layout = 2130968596;
 			
 			static Layout()
 			{
@@ -1440,14 +1769,23 @@ namespace Spla2n_Stuff
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int app_name = 2131230721;
+			// aapt resource value: 0x7f060003
+			public const int app_name = 2131099651;
 			
-			// aapt resource value: 0x7f080000
-			public const int library_name = 2131230720;
+			// aapt resource value: 0x7f060005
+			public const int banner_ad_unit_id = 2131099653;
 			
-			// aapt resource value: 0x7f080002
-			public const int loadingText = 2131230722;
+			// aapt resource value: 0x7f060000
+			public const int common_google_play_services_unknown_issue = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int library_name = 2131099650;
+			
+			// aapt resource value: 0x7f060004
+			public const int loadingText = 2131099652;
+			
+			// aapt resource value: 0x7f060001
+			public const int status_bar_notification_info_overflow = 2131099649;
 			
 			static String()
 			{
@@ -1462,20 +1800,59 @@ namespace Spla2n_Stuff
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int Base_CardView = 2131034113;
+			// aapt resource value: 0x7f070002
+			public const int Base_CardView = 2131165186;
 			
-			// aapt resource value: 0x7f050000
-			public const int CardView = 2131034112;
+			// aapt resource value: 0x7f070001
+			public const int CardView = 2131165185;
 			
-			// aapt resource value: 0x7f050002
-			public const int CardView_Dark = 2131034114;
+			// aapt resource value: 0x7f070003
+			public const int CardView_Dark = 2131165187;
 			
-			// aapt resource value: 0x7f050003
-			public const int CardView_Light = 2131034115;
+			// aapt resource value: 0x7f070004
+			public const int CardView_Light = 2131165188;
 			
-			// aapt resource value: 0x7f050004
-			public const int Theme_Custom = 2131034116;
+			// aapt resource value: 0x7f07000a
+			public const int TextAppearance_Compat_Notification = 2131165194;
+			
+			// aapt resource value: 0x7f07000b
+			public const int TextAppearance_Compat_Notification_Info = 2131165195;
+			
+			// aapt resource value: 0x7f070005
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131165189;
+			
+			// aapt resource value: 0x7f070010
+			public const int TextAppearance_Compat_Notification_Line2 = 2131165200;
+			
+			// aapt resource value: 0x7f070009
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131165193;
+			
+			// aapt resource value: 0x7f070006
+			public const int TextAppearance_Compat_Notification_Media = 2131165190;
+			
+			// aapt resource value: 0x7f07000c
+			public const int TextAppearance_Compat_Notification_Time = 2131165196;
+			
+			// aapt resource value: 0x7f070007
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131165191;
+			
+			// aapt resource value: 0x7f07000d
+			public const int TextAppearance_Compat_Notification_Title = 2131165197;
+			
+			// aapt resource value: 0x7f070008
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131165192;
+			
+			// aapt resource value: 0x7f070011
+			public const int Theme_Custom = 2131165201;
+			
+			// aapt resource value: 0x7f070000
+			public const int Theme_IAPTheme = 2131165184;
+			
+			// aapt resource value: 0x7f07000e
+			public const int Widget_Compat_NotificationActionContainer = 2131165198;
+			
+			// aapt resource value: 0x7f07000f
+			public const int Widget_Compat_NotificationActionText = 2131165199;
 			
 			static Style()
 			{
@@ -1490,12 +1867,23 @@ namespace Spla2n_Stuff
 		public partial class Styleable
 		{
 			
+			public static int[] AdsAttrs = new int[] {
+					2130771968,
+					2130771969,
+					2130771970};
+			
+			// aapt resource value: 0
+			public const int AdsAttrs_adSize = 0;
+			
+			// aapt resource value: 1
+			public const int AdsAttrs_adSizes = 1;
+			
+			// aapt resource value: 2
+			public const int AdsAttrs_adUnitId = 2;
+			
 			public static int[] CardView = new int[] {
 					16843071,
 					16843072,
-					2130771968,
-					2130771969,
-					2130771970,
 					2130771971,
 					2130771972,
 					2130771973,
@@ -1503,7 +1891,10 @@ namespace Spla2n_Stuff
 					2130771975,
 					2130771976,
 					2130771977,
-					2130771978};
+					2130771978,
+					2130771979,
+					2130771980,
+					2130771981};
 			
 			// aapt resource value: 1
 			public const int CardView_android_minHeight = 1;
@@ -1543,6 +1934,46 @@ namespace Spla2n_Stuff
 			
 			// aapt resource value: 11
 			public const int CardView_contentPaddingTop = 11;
+			
+			public static int[] FontFamily = new int[] {
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987};
+			
+			// aapt resource value: 0
+			public const int FontFamily_fontProviderAuthority = 0;
+			
+			// aapt resource value: 3
+			public const int FontFamily_fontProviderCerts = 3;
+			
+			// aapt resource value: 4
+			public const int FontFamily_fontProviderFetchStrategy = 4;
+			
+			// aapt resource value: 5
+			public const int FontFamily_fontProviderFetchTimeout = 5;
+			
+			// aapt resource value: 1
+			public const int FontFamily_fontProviderPackage = 1;
+			
+			// aapt resource value: 2
+			public const int FontFamily_fontProviderQuery = 2;
+			
+			public static int[] FontFamilyFont = new int[] {
+					2130771988,
+					2130771989,
+					2130771990};
+			
+			// aapt resource value: 1
+			public const int FontFamilyFont_font = 1;
+			
+			// aapt resource value: 0
+			public const int FontFamilyFont_fontStyle = 0;
+			
+			// aapt resource value: 2
+			public const int FontFamilyFont_fontWeight = 2;
 			
 			static Styleable()
 			{

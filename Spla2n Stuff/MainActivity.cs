@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System;
 using Android.Views;
 using Android.Content.PM;
+using Android.Gms.Ads;
 
 namespace Spla2n_Stuff
 {
@@ -60,6 +61,16 @@ namespace Spla2n_Stuff
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+         
+
+
+            var id = "ca-app-pub-1486333068830863~7686704947";
+            Android.Gms.Ads.MobileAds.Initialize(this, id);
+            var adView = FindViewById<AdView>(Resource.Id.adView);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
+
 
             CopyDatabase("Spla2n.db");
 

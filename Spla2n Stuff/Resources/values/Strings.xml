@@ -2,4 +2,5 @@
 <resources>
   <string name="app_name">Spla2n Stuff</string>
   <string name="loadingText">Loading...</string>
+  <string name="banner_ad_unit_id">ca-app-pub-1486333068830863/8520085099</string>
 </resources>
