@@ -12,10 +12,11 @@ using Android.Widget;
 using Android.Graphics;
 using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
+using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Brands")]
+    [Activity(Label = "Brands", ScreenOrientation = ScreenOrientation.Portrait)]
     public class BrandActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState) {

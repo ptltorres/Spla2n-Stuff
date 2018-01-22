@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
@@ -14,7 +15,7 @@ using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
 
 namespace Spla2n_Stuff {
-    [Activity(Label = "Gear")]
+    [Activity(Label = "Gear", ScreenOrientation = ScreenOrientation.Portrait)]
     public class GearActivity : Activity {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);

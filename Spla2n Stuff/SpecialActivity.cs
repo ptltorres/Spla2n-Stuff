@@ -12,10 +12,11 @@ using Android.Widget;
 using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Specials")]
+    [Activity(Label = "Specials", ScreenOrientation = ScreenOrientation.Portrait)]
     public class SpecialActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState) {

@@ -78,20 +78,20 @@ namespace Spla2n_Stuff
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int cardview_dark_background = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int cardview_dark_background = 2131099648;
 			
-			// aapt resource value: 0x7f050001
-			public const int cardview_light_background = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int cardview_light_background = 2131099649;
 			
-			// aapt resource value: 0x7f050002
-			public const int cardview_shadow_end_color = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int cardview_shadow_end_color = 2131099650;
 			
-			// aapt resource value: 0x7f050003
-			public const int cardview_shadow_start_color = 2131034115;
+			// aapt resource value: 0x7f060003
+			public const int cardview_shadow_start_color = 2131099651;
 			
-			// aapt resource value: 0x7f050004
-			public const int theme_devicedefault_background = 2131034116;
+			// aapt resource value: 0x7f060004
+			public const int theme_devicedefault_background = 2131099652;
 			
 			static Color()
 			{
@@ -106,14 +106,14 @@ namespace Spla2n_Stuff
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int cardview_compat_inset_shadow = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int cardview_compat_inset_shadow = 2131165184;
 			
-			// aapt resource value: 0x7f060001
-			public const int cardview_default_elevation = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int cardview_default_elevation = 2131165185;
 			
-			// aapt resource value: 0x7f060002
-			public const int cardview_default_radius = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int cardview_default_radius = 2131165186;
 			
 			static Dimension()
 			{
@@ -1233,149 +1233,149 @@ namespace Spla2n_Stuff
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080020
-			public const int abilityButton = 2131230752;
+			// aapt resource value: 0x7f090020
+			public const int abilityButton = 2131296288;
 			
-			// aapt resource value: 0x7f080003
-			public const int abilityDescription = 2131230723;
+			// aapt resource value: 0x7f090003
+			public const int abilityDescription = 2131296259;
 			
-			// aapt resource value: 0x7f080000
-			public const int abilityListView = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int abilityListView = 2131296256;
 			
-			// aapt resource value: 0x7f080002
-			public const int abilityTitle = 2131230722;
+			// aapt resource value: 0x7f090002
+			public const int abilityTitle = 2131296258;
 			
-			// aapt resource value: 0x7f080021
-			public const int brandButton = 2131230753;
+			// aapt resource value: 0x7f090021
+			public const int brandButton = 2131296289;
 			
-			// aapt resource value: 0x7f08000d
-			public const int brandName = 2131230733;
+			// aapt resource value: 0x7f09000d
+			public const int brandName = 2131296269;
 			
-			// aapt resource value: 0x7f080004
-			public const int brandTitle = 2131230724;
+			// aapt resource value: 0x7f090004
+			public const int brandTitle = 2131296260;
 			
-			// aapt resource value: 0x7f080023
-			public const int clothingButton = 2131230755;
+			// aapt resource value: 0x7f090023
+			public const int clothingButton = 2131296291;
 			
-			// aapt resource value: 0x7f080007
-			public const int commonDescription = 2131230727;
+			// aapt resource value: 0x7f090007
+			public const int commonDescription = 2131296263;
 			
-			// aapt resource value: 0x7f080005
-			public const int commonTitle = 2131230725;
+			// aapt resource value: 0x7f090005
+			public const int commonTitle = 2131296261;
 			
-			// aapt resource value: 0x7f08000b
-			public const int gearTitle = 2131230731;
+			// aapt resource value: 0x7f09000b
+			public const int gearTitle = 2131296267;
 			
-			// aapt resource value: 0x7f080022
-			public const int headgearButton = 2131230754;
+			// aapt resource value: 0x7f090022
+			public const int headgearButton = 2131296290;
 			
-			// aapt resource value: 0x7f08000c
-			public const int imageBrand = 2131230732;
+			// aapt resource value: 0x7f09000c
+			public const int imageBrand = 2131296268;
 			
-			// aapt resource value: 0x7f080006
-			public const int imageCommon = 2131230726;
+			// aapt resource value: 0x7f090006
+			public const int imageCommon = 2131296262;
 			
-			// aapt resource value: 0x7f08002d
-			public const int imageSpecial = 2131230765;
+			// aapt resource value: 0x7f09002d
+			public const int imageSpecial = 2131296301;
 			
-			// aapt resource value: 0x7f08002a
-			public const int imageSub = 2131230762;
+			// aapt resource value: 0x7f09002a
+			public const int imageSub = 2131296298;
 			
-			// aapt resource value: 0x7f080009
-			public const int imageUncommon = 2131230729;
+			// aapt resource value: 0x7f090009
+			public const int imageUncommon = 2131296265;
 			
-			// aapt resource value: 0x7f080001
-			public const int imageView1 = 2131230721;
+			// aapt resource value: 0x7f090001
+			public const int imageView1 = 2131296257;
 			
-			// aapt resource value: 0x7f08001e
-			public const int league1Image = 2131230750;
+			// aapt resource value: 0x7f09001e
+			public const int league1Image = 2131296286;
 			
-			// aapt resource value: 0x7f08001c
-			public const int league1Name = 2131230748;
+			// aapt resource value: 0x7f09001c
+			public const int league1Name = 2131296284;
 			
-			// aapt resource value: 0x7f08001f
-			public const int league2Image = 2131230751;
+			// aapt resource value: 0x7f09001f
+			public const int league2Image = 2131296287;
 			
-			// aapt resource value: 0x7f08001d
-			public const int league2Name = 2131230749;
+			// aapt resource value: 0x7f09001d
+			public const int league2Name = 2131296285;
 			
-			// aapt resource value: 0x7f08001b
-			public const int leagueModeDesc = 2131230747;
+			// aapt resource value: 0x7f09001b
+			public const int leagueModeDesc = 2131296283;
 			
-			// aapt resource value: 0x7f08001a
-			public const int leagueModeTitle = 2131230746;
+			// aapt resource value: 0x7f09001a
+			public const int leagueModeTitle = 2131296282;
 			
-			// aapt resource value: 0x7f080018
-			public const int ranked1Image = 2131230744;
+			// aapt resource value: 0x7f090018
+			public const int ranked1Image = 2131296280;
 			
-			// aapt resource value: 0x7f080016
-			public const int ranked1Name = 2131230742;
+			// aapt resource value: 0x7f090016
+			public const int ranked1Name = 2131296278;
 			
-			// aapt resource value: 0x7f080019
-			public const int ranked2Image = 2131230745;
+			// aapt resource value: 0x7f090019
+			public const int ranked2Image = 2131296281;
 			
-			// aapt resource value: 0x7f080017
-			public const int ranked2Name = 2131230743;
+			// aapt resource value: 0x7f090017
+			public const int ranked2Name = 2131296279;
 			
-			// aapt resource value: 0x7f080015
-			public const int rankedModeDesc = 2131230741;
+			// aapt resource value: 0x7f090015
+			public const int rankedModeDesc = 2131296277;
 			
-			// aapt resource value: 0x7f080014
-			public const int rankedModeTitle = 2131230740;
+			// aapt resource value: 0x7f090014
+			public const int rankedModeTitle = 2131296276;
 			
-			// aapt resource value: 0x7f080012
-			public const int regular1Image = 2131230738;
+			// aapt resource value: 0x7f090012
+			public const int regular1Image = 2131296274;
 			
-			// aapt resource value: 0x7f080010
-			public const int regular1Name = 2131230736;
+			// aapt resource value: 0x7f090010
+			public const int regular1Name = 2131296272;
 			
-			// aapt resource value: 0x7f080013
-			public const int regular2Image = 2131230739;
+			// aapt resource value: 0x7f090013
+			public const int regular2Image = 2131296275;
 			
-			// aapt resource value: 0x7f080011
-			public const int regular2Name = 2131230737;
+			// aapt resource value: 0x7f090011
+			public const int regular2Name = 2131296273;
 			
-			// aapt resource value: 0x7f08000f
-			public const int regularModeDesc = 2131230735;
+			// aapt resource value: 0x7f09000f
+			public const int regularModeDesc = 2131296271;
 			
-			// aapt resource value: 0x7f08000e
-			public const int regularModeTitle = 2131230734;
+			// aapt resource value: 0x7f09000e
+			public const int regularModeTitle = 2131296270;
 			
-			// aapt resource value: 0x7f080024
-			public const int shoesButton = 2131230756;
+			// aapt resource value: 0x7f090024
+			public const int shoesButton = 2131296292;
 			
-			// aapt resource value: 0x7f08002e
-			public const int specialDescription = 2131230766;
+			// aapt resource value: 0x7f09002e
+			public const int specialDescription = 2131296302;
 			
-			// aapt resource value: 0x7f08002c
-			public const int specialTitle = 2131230764;
+			// aapt resource value: 0x7f09002c
+			public const int specialTitle = 2131296300;
 			
-			// aapt resource value: 0x7f080025
-			public const int specialsButton = 2131230757;
+			// aapt resource value: 0x7f090025
+			public const int specialsButton = 2131296293;
 			
-			// aapt resource value: 0x7f08002f
-			public const int stats = 2131230767;
+			// aapt resource value: 0x7f09002f
+			public const int stats = 2131296303;
 			
-			// aapt resource value: 0x7f080027
-			public const int subButton = 2131230759;
+			// aapt resource value: 0x7f090027
+			public const int subButton = 2131296295;
 			
-			// aapt resource value: 0x7f08002b
-			public const int subDescription = 2131230763;
+			// aapt resource value: 0x7f09002b
+			public const int subDescription = 2131296299;
 			
-			// aapt resource value: 0x7f080029
-			public const int subTitle = 2131230761;
+			// aapt resource value: 0x7f090029
+			public const int subTitle = 2131296297;
 			
-			// aapt resource value: 0x7f08000a
-			public const int uncommonDescription = 2131230730;
+			// aapt resource value: 0x7f09000a
+			public const int uncommonDescription = 2131296266;
 			
-			// aapt resource value: 0x7f080008
-			public const int uncommonTitle = 2131230728;
+			// aapt resource value: 0x7f090008
+			public const int uncommonTitle = 2131296264;
 			
-			// aapt resource value: 0x7f080028
-			public const int weaponTitle = 2131230760;
+			// aapt resource value: 0x7f090028
+			public const int weaponTitle = 2131296296;
 			
-			// aapt resource value: 0x7f080026
-			public const int weaponsButton = 2131230758;
+			// aapt resource value: 0x7f090026
+			public const int weaponsButton = 2131296294;
 			
 			static Id()
 			{
@@ -1390,23 +1390,23 @@ namespace Spla2n_Stuff
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Ability = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int Ability = 2130968576;
 			
-			// aapt resource value: 0x7f030001
-			public const int Ability_List = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int Ability_List = 2130968577;
 			
-			// aapt resource value: 0x7f030002
-			public const int Brand_Layout = 2130903042;
+			// aapt resource value: 0x7f040002
+			public const int Brand_Layout = 2130968578;
 			
-			// aapt resource value: 0x7f030003
-			public const int Gear_Layout = 2130903043;
+			// aapt resource value: 0x7f040003
+			public const int Gear_Layout = 2130968579;
 			
-			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			// aapt resource value: 0x7f040004
+			public const int Main = 2130968580;
 			
-			// aapt resource value: 0x7f030005
-			public const int Weapon_Layout = 2130903045;
+			// aapt resource value: 0x7f040005
+			public const int Weapon_Layout = 2130968581;
 			
 			static Layout()
 			{
@@ -1418,17 +1418,36 @@ namespace Spla2n_Stuff
 			}
 		}
 		
+		public partial class Mipmap
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int ic_launcher = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int ic_round_launcher = 2130903041;
+			
+			static Mipmap()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Mipmap()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int app_name = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int app_name = 2131230721;
 			
-			// aapt resource value: 0x7f070000
-			public const int library_name = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int library_name = 2131230720;
 			
-			// aapt resource value: 0x7f070002
-			public const int loadingText = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int loadingText = 2131230722;
 			
 			static String()
 			{
@@ -1443,20 +1462,20 @@ namespace Spla2n_Stuff
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int Base_CardView = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int Base_CardView = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int CardView = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int CardView = 2131034112;
 			
-			// aapt resource value: 0x7f040002
-			public const int CardView_Dark = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int CardView_Dark = 2131034114;
 			
-			// aapt resource value: 0x7f040003
-			public const int CardView_Light = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int CardView_Light = 2131034115;
 			
-			// aapt resource value: 0x7f040004
-			public const int Theme_Custom = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int Theme_Custom = 2131034116;
 			
 			static Style()
 			{

@@ -10,10 +10,12 @@ using Android.Content;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
+using Android.Views;
+using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Spla2n Stuff", MainLauncher = true)]
+    [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
         private static string TAG = "MainActivity";

@@ -12,10 +12,11 @@ using Android.Widget;
 using Spla2n_Stuff.Helpers;
 using Spla2n_Stuff.GearTypes;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Abilities")]
+    [Activity(Label = "Abilities", ScreenOrientation = ScreenOrientation.Portrait)]
     public class AbilityActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState) {
