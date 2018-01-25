@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo"></style>
+  <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#fffe447d</item>
+    <item name="colorPrimaryDark">#fffc0251</item>
+  </style>
+</resources>

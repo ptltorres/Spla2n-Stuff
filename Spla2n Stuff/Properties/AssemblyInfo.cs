@@ -17,7 +17,7 @@ using Android.App;
 [assembly: ComVisible(false)]
 
 #if DEBUG
-[assembly: Application(Debuggable=true)]
+[assembly: Application(Debuggable = true)]
 #else
 [assembly: Application(Debuggable = false)]
 #endif

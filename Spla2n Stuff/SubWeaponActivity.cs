@@ -15,7 +15,7 @@ using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
 
 namespace Spla2n_Stuff {
-    [Activity(Label = "Sub Weapons", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Sub Weapons", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class SubWeaponActivity : Activity {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);

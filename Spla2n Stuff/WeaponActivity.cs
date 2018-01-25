@@ -16,7 +16,7 @@ using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Weapons", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Weapons", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class WeaponActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState) {

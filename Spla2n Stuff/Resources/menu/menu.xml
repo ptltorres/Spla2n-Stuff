@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_abilities"
+        android:title="Abilities" />
+    <item
+        android:id="@+id/nav_brands"
+        android:title="Brands" />
+    <item
+        android:id="@+id/nav_headgear"
+        android:title="Headgear" />
+    <item
+        android:id="@+id/nav_clothes"
+        android:title="Clothes" />
+    <item
+        android:id="@+id/nav_shoes"
+        android:title="Shoes" />
+    <item
+         android:id="@+id/nav_specials"
+         android:title="Specials" />
+    <item
+          android:id="@+id/nav_weapons"
+          android:title="Weapons" />
+    <item
+        android:id="@+id/nav_subweapons"
+        android:title="Sub Weapons" />
+  </group>
+</menu>

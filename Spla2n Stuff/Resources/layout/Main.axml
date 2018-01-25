@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#fffe447d"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent">
+      
+        
+
+
+        
+      
+      
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,7 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-      
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="170dp"
@@ -287,130 +322,28 @@
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
-
-      <com.google.android.gms.ads.AdView
-           xmlns:ads="http://schemas.android.com/apk/res-auto"
-           android:id="@+id/adView"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:gravity="center_horizontal"
-           ads:adSize="SMART_BANNER"
-           ads:adUnitId="@string/banner_ad_unit_id">
-      </com.google.android.gms.ads.AdView>
-
-
-      <Button
-            android:id="@+id/abilityButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Abilities"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/brandButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Brands"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/headgearButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Headgear"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/clothingButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Clothes"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/shoesButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Shoes"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/specialsButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Specials"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/weaponsButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Weapons"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
-        <Button
-            android:id="@+id/subButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:text="Sub Weapons"
-            android:background="@drawable/mainbuttons"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:shadowColor="#000000"
-            android:shadowDx="1.5"
-            android:shadowDy="1.3"
-            android:shadowRadius="1.6" />
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            cardview:adSize="SMART_BANNER"
+            cardview:adUnitId="@string/banner_ad_unit_id" />
+        
     </LinearLayout>
 </ScrollView>
+      
+      
+        
+
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/menu" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

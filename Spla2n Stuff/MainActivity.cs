@@ -13,26 +13,20 @@ using System;
 using Android.Views;
 using Android.Content.PM;
 using Android.Gms.Ads;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.V7.App;
+using Android.Support.V4.Widget;
+using Android.Support.Design.Widget;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity : Activity
-    {
+    [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.DesignDemo")]
+    public class MainActivity : AppCompatActivity {
         private static string TAG = "MainActivity";
 
         //DatabaseHelper dbHelper;
         private Typeface tf;
 
-        // Button views
-        private Button abilityButton;
-        private Button brandsButton;
-        private Button headgearButton;
-        private Button clothingButton;
-        private Button shoesButton;
-        private Button specialsButton;
-        private Button weaponsButton;
-        private Button subButton;
 
         // Map rotation views
         private TextView regularTitle;
@@ -56,13 +50,26 @@ namespace Spla2n_Stuff
 
         private List<MapRotation> mapRotation;
 
+        private DrawerLayout drawerLayout;
+        private NavigationView navigationView;
+
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-         
+
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowTitleEnabled(false);
+            SupportActionBar.SetHomeButtonEnabled(true);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+            navigationView.NavigationItemSelected += HomeNavigationView_NavigationItemSelected;
 
 
             var id = "ca-app-pub-1486333068830863~7686704947";
@@ -76,7 +83,7 @@ namespace Spla2n_Stuff
 
             tf = Typeface.CreateFromAsset(Assets, "Paintball.ttf");
 
-            SetUpButtons();
+            
             SetUpMapViews();
 
             Task.Run(async () => {
@@ -91,6 +98,74 @@ namespace Spla2n_Stuff
 
         }
 
+        protected override void OnResume() {
+            base.OnResume();
+
+            Task.Run(async () => {
+                mapRotation = await MapRotationHelper.GetMapRotationAsync();
+
+                RunOnUiThread(() => {
+                    BindRegularMode();
+                    BindRankedMode();
+                    BindLeagueMode();
+                });
+            });
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item) {
+            switch (item.ItemId) {
+                case Android.Resource.Id.Home:
+                    drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
+                    return true;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
+        private void HomeNavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e) {
+            var menuItem = e.MenuItem;
+            menuItem.SetChecked(!menuItem.IsChecked);
+            Intent intent;
+            Intent activity;
+
+            switch (menuItem.ItemId) {
+                case Resource.Id.nav_abilities:
+                    intent = new Intent(this, typeof(AbilityActivity));
+                    StartActivity(intent);
+                    break;
+                case Resource.Id.nav_brands:
+                    intent = new Intent(this, typeof(BrandActivity));
+                    StartActivity(intent);
+                    break;
+                case Resource.Id.nav_headgear:
+                    activity = new Intent(this, typeof(GearActivity));
+                    activity.PutExtra("Type", "Headgear");
+                    StartActivity(activity);
+                    break;
+                case Resource.Id.nav_clothes:
+                    activity = new Intent(this, typeof(GearActivity));
+                    activity.PutExtra("Type", "Clothe");
+                    StartActivity(activity);
+                    break;
+                case Resource.Id.nav_shoes:
+                    activity = new Intent(this, typeof(GearActivity));
+                    activity.PutExtra("Type", "Shoe");
+                    StartActivity(activity);
+                    break;
+                case Resource.Id.nav_specials:
+                    intent = new Intent(this, typeof(SpecialActivity));
+                    StartActivity(intent);
+                    break;
+                case Resource.Id.nav_weapons:
+                    intent = new Intent(this, typeof(WeaponActivity));
+                    StartActivity(intent);
+                    break;
+                case Resource.Id.nav_subweapons:
+                    intent = new Intent(this, typeof(SubWeaponActivity));
+                    StartActivity(intent);
+                    break;
+            }
+        }
+
         private void BindRegularMode() {
             regularDesc.Text = mapRotation[0].GameMode;
             regularMap1Name.Text = mapRotation[0].Maps[0].Name;
@@ -98,6 +173,11 @@ namespace Spla2n_Stuff
 
             try {
                 regularMap1Image.SetImageResource(ImageHelper.GetImageId(regularMap1Name.Text));
+            } catch (Exception e) {
+                Android.Util.Log.Error(TAG, e.StackTrace);
+            }
+
+            try {
                 regularMap2Image.SetImageResource(ImageHelper.GetImageId(regularMap2Name.Text));
             } catch (Exception e) {
                 Android.Util.Log.Error(TAG, e.StackTrace);
@@ -111,6 +191,12 @@ namespace Spla2n_Stuff
 
             try {
                 rankedMap1Image.SetImageResource(ImageHelper.GetImageId(rankedMap1Name.Text));
+
+            } catch (Exception e) {
+                Android.Util.Log.Error(TAG, e.StackTrace);
+            }
+
+            try {
                 rankedMap2Image.SetImageResource(ImageHelper.GetImageId(rankedMap2Name.Text));
 
             } catch (Exception e) {
@@ -125,6 +211,12 @@ namespace Spla2n_Stuff
 
             try {
                 leagueMap1Image.SetImageResource(ImageHelper.GetImageId(leagueMap1Name.Text));
+
+            } catch (Exception e) {
+                Android.Util.Log.Error(TAG, e.StackTrace);
+            }
+
+            try {
                 leagueMap2Image.SetImageResource(ImageHelper.GetImageId(leagueMap2Name.Text));
 
             } catch (Exception e) {
@@ -151,62 +243,6 @@ namespace Spla2n_Stuff
                 dbFileStream.Close();
                 dbAssetStream.Close();
             }
-        }
-
-        private void SetUpButtons() {
-            abilityButton = FindViewById<Button>(Resource.Id.abilityButton);
-            brandsButton = FindViewById<Button>(Resource.Id.brandButton);
-            headgearButton = FindViewById<Button>(Resource.Id.headgearButton);
-            clothingButton = FindViewById<Button>(Resource.Id.clothingButton);
-            shoesButton = FindViewById<Button>(Resource.Id.shoesButton);
-            specialsButton = FindViewById<Button>(Resource.Id.specialsButton);
-            weaponsButton = FindViewById<Button>(Resource.Id.weaponsButton);
-            subButton = FindViewById<Button>(Resource.Id.subButton);
-
-            Button[] buttons = { abilityButton, brandsButton, headgearButton, clothingButton,
-                                 shoesButton, specialsButton,weaponsButton,subButton};
-
-            foreach (var button in buttons) {
-                button.SetTypeface(tf, TypefaceStyle.Normal);
-            }
-
-            abilityButton.Click += delegate {
-                StartActivity(typeof(AbilityActivity));
-            };
-
-            brandsButton.Click += delegate {
-                StartActivity(typeof(BrandActivity));
-            };
-
-            headgearButton.Click += delegate {
-                var activity = new Intent(this, typeof(GearActivity));
-                activity.PutExtra("Type", "Headgear");
-                StartActivity(activity);
-            };
-
-            clothingButton.Click += delegate {
-                var activity = new Intent(this, typeof(GearActivity));
-                activity.PutExtra("Type", "Clothe");
-                StartActivity(activity);
-            };
-
-            shoesButton.Click += delegate {
-                var activity = new Intent(this, typeof(GearActivity));
-                activity.PutExtra("Type", "Shoe");
-                StartActivity(activity);
-            };
-
-            specialsButton.Click += delegate {
-                StartActivity(typeof(SpecialActivity));
-            };
-
-            weaponsButton.Click += delegate {
-                StartActivity(typeof(WeaponActivity));
-            };
-
-            subButton.Click += delegate {
-                StartActivity(typeof(SubWeaponActivity));
-            };
         }
 
         private void SetUpMapViews() {

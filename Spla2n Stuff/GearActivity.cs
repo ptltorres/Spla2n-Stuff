@@ -15,7 +15,7 @@ using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
 
 namespace Spla2n_Stuff {
-    [Activity(Label = "Gear", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Gear", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class GearActivity : Activity {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);

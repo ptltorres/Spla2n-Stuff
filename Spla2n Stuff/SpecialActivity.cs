@@ -16,7 +16,7 @@ using Android.Content.PM;
 
 namespace Spla2n_Stuff
 {
-    [Activity(Label = "Specials", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Specials", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class SpecialActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState) {
