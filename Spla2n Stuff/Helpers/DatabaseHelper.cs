@@ -70,6 +70,9 @@ namespace Spla2n_Stuff.Helpers
                 database.Close();
                 IsDbClose = true;
             }
+
+            abilities.Sort((x, y) => x.Name.CompareTo(y.Name));
+
             return abilities;
         }
 
@@ -117,6 +120,8 @@ namespace Spla2n_Stuff.Helpers
                 database.Close();
                 IsDbClose = true;
             }
+            brands.Sort((x, y) => x.Name.CompareTo(y.Name));
+
             return brands;
         }
 
@@ -144,6 +149,8 @@ namespace Spla2n_Stuff.Helpers
                 database.Close();
                 IsDbClose = true;
             }
+            subWeapons.Sort((x, y) => x.Name.CompareTo(y.Name));
+
             return subWeapons;
         }
 
@@ -171,6 +178,8 @@ namespace Spla2n_Stuff.Helpers
                 database.Close();
                 IsDbClose = true;
             }
+            specials.Sort((x, y) => x.Name.CompareTo(y.Name));
+
             return specials;
         }
 
@@ -212,6 +221,8 @@ namespace Spla2n_Stuff.Helpers
                 database.Close();
                 IsDbClose = true;
             }
+            weapons.Sort((x, y) => x.Name.CompareTo(y.Name));
+
             return weapons;
         }
 
@@ -278,7 +289,8 @@ namespace Spla2n_Stuff.Helpers
             if (!IsDbClose) {
                 database.Close();
                 IsDbClose = true;
-            } 
+            }
+            gears.Sort((x, y) => x.Name.CompareTo(y.Name));
 
             return gears;
         }
