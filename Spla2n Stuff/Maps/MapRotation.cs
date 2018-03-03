@@ -13,10 +13,11 @@ using Android.Widget;
 namespace Spla2n_Stuff.Maps {
     public class MapRotation {
         public string GameMode { get; set; }
+        public string Time { get; set; }
         public Map[] Maps { get; set; }
 
         public override string ToString() {
-            return GameMode + "\n" + Maps[0].Name + "\n" + Maps[1].Name;
+            return GameMode + ": {" + Maps[0].Name + ", " + Maps[1].Name+ "}";
         }
     }
 }

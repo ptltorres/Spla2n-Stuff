@@ -37,21 +37,32 @@ namespace Spla2n_Stuff
         private TextView regularMap2Name;
         private ImageView regularMap1Image;
         private ImageView regularMap2Image;
+        private Button upcomingRegularBtn;
         private TextView rankedDesc;
         private TextView rankedMap1Name;
         private TextView rankedMap2Name;
         private ImageView rankedMap1Image;
         private ImageView rankedMap2Image;
+        private Button upcomingRankedBtn;
         private TextView leagueDesc;
         private TextView leagueMap1Name;
         private TextView leagueMap2Name;
         private ImageView leagueMap1Image;
         private ImageView leagueMap2Image;
+        private Button upcomingLeagueBtn;
 
-        private List<MapRotation> mapRotation;
+        
+        // Lists for map rotations
+        public static List<MapRotation> regularMapRotation;
+        public static List<MapRotation> rankedMapRotation;
+        public static List<MapRotation> leagueMapRotation;
 
         private DrawerLayout drawerLayout;
         private NavigationView navigationView;
+
+        public const string regular = "regular";
+        public const string ranked = "gachi";
+        public const string league = "league";
 
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
@@ -87,7 +98,10 @@ namespace Spla2n_Stuff
             SetUpMapViews();
 
             Task.Run(async () => {
-                mapRotation = await MapRotationHelper.GetMapRotationAsync();
+                regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
+                rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
+                leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
+
 
                 RunOnUiThread(() => {
                     BindRegularMode();
@@ -96,13 +110,39 @@ namespace Spla2n_Stuff
                 });      
             });
 
+            upcomingRegularBtn.Click += delegate {
+                Intent activity;
+
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", regular);
+                StartActivity(activity);
+            };
+
+            upcomingRankedBtn.Click += delegate {
+                Intent activity;
+
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", ranked);
+                StartActivity(activity);
+            };
+
+            upcomingLeagueBtn.Click += delegate {
+                Intent activity;
+
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", league);
+                StartActivity(activity);
+            };
+
         }
 
         protected override void OnResume() {
             base.OnResume();
 
             Task.Run(async () => {
-                mapRotation = await MapRotationHelper.GetMapRotationAsync();
+                regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
+                rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
+                leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
 
                 RunOnUiThread(() => {
                     BindRegularMode();
@@ -167,9 +207,9 @@ namespace Spla2n_Stuff
         }
 
         private void BindRegularMode() {
-            regularDesc.Text = mapRotation[0].GameMode;
-            regularMap1Name.Text = mapRotation[0].Maps[0].Name;
-            regularMap2Name.Text = mapRotation[0].Maps[1].Name;
+            regularDesc.Text = regularMapRotation[0].GameMode;
+            regularMap1Name.Text = regularMapRotation[0].Maps[0].Name;
+            regularMap2Name.Text = regularMapRotation[0].Maps[1].Name;
 
             try {
                 regularMap1Image.SetImageResource(ImageHelper.GetImageId(regularMap1Name.Text));
@@ -185,9 +225,9 @@ namespace Spla2n_Stuff
         }
 
         private void BindRankedMode() {
-            rankedDesc.Text = mapRotation[1].GameMode;
-            rankedMap1Name.Text = mapRotation[1].Maps[0].Name;
-            rankedMap2Name.Text = mapRotation[1].Maps[1].Name;
+            rankedDesc.Text = rankedMapRotation[0].GameMode;
+            rankedMap1Name.Text = rankedMapRotation[0].Maps[0].Name;
+            rankedMap2Name.Text = rankedMapRotation[0].Maps[1].Name;
 
             try {
                 rankedMap1Image.SetImageResource(ImageHelper.GetImageId(rankedMap1Name.Text));
@@ -205,9 +245,9 @@ namespace Spla2n_Stuff
         }
 
         private void BindLeagueMode() {
-            leagueDesc.Text = mapRotation[2].GameMode;
-            leagueMap1Name.Text = mapRotation[2].Maps[0].Name;
-            leagueMap2Name.Text = mapRotation[2].Maps[1].Name;
+            leagueDesc.Text = leagueMapRotation[0].GameMode;
+            leagueMap1Name.Text = leagueMapRotation[0].Maps[0].Name;
+            leagueMap2Name.Text = leagueMapRotation[0].Maps[1].Name;
 
             try {
                 leagueMap1Image.SetImageResource(ImageHelper.GetImageId(leagueMap1Name.Text));
@@ -279,6 +319,16 @@ namespace Spla2n_Stuff
             leagueMap2Name.SetTypeface(tf, TypefaceStyle.Normal);
             leagueMap1Image = FindViewById<ImageView>(Resource.Id.league1Image);
             leagueMap2Image = FindViewById<ImageView>(Resource.Id.league2Image);
+
+            // Buttons setup
+            upcomingRegularBtn = FindViewById<Button>(Resource.Id.upcomingStagesTurf);
+            upcomingRegularBtn.SetTypeface(tf, TypefaceStyle.Normal);
+
+            upcomingRankedBtn = FindViewById<Button>(Resource.Id.upcomingStagesRanked);
+            upcomingRankedBtn.SetTypeface(tf, TypefaceStyle.Normal);
+
+            upcomingLeagueBtn = FindViewById<Button>(Resource.Id.upcomingStagesLeague);
+            upcomingLeagueBtn.SetTypeface(tf, TypefaceStyle.Normal);
         }
     }
 }

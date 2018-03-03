@@ -27,18 +27,10 @@ namespace Spla2n_Stuff.Helpers {
 
         static string TAG = "MapRotationHelper";
 
-        private const string regular = "regular";
-        private const string ranked = "gachi";
-        private const string league = "league";
-
-        public static async Task<List<MapRotation>> GetMapRotationAsync() {
+        public static async Task<List<MapRotation>> GetMapRotationAsync(string mode) {
             JObject json = await GetJSONDataAsync();
 
-            List<MapRotation> mapRotation = new List<MapRotation> {
-                GetRotationForBattleType(json, regular),
-                GetRotationForBattleType(json, ranked),
-                GetRotationForBattleType(json, league)
-            };
+            List<MapRotation> mapRotation = GetRotationForBattleType(json, mode);
 
             return mapRotation;
         }
@@ -66,29 +58,40 @@ namespace Spla2n_Stuff.Helpers {
             return JObject.Parse(data);
         }
 
-        private static MapRotation GetRotationForBattleType(JObject json, string mode) {
+        private static List<MapRotation> GetRotationForBattleType(JObject json, string mode) {
+            List<MapRotation> mRotation = new List<MapRotation>();
+
             DateTime local = DateTime.Now;
             DateTime utc = local.ToUniversalTime();
 
             var rotations = json["modes"][mode];
 
             foreach (var rot in rotations) {
-                TimeSpan start = TimeSpan.FromSeconds((double)rot["startTime"]);
+                TimeSpan start = TimeSpan.FromSeconds((int)rot["startTime"]);
+                TimeSpan end = TimeSpan.FromSeconds((double)rot["endTime"]);
 
-                if (TimeSpan.FromHours(utc.Hour) + TimeSpan.FromMinutes(utc.Minute) > 
-                    TimeSpan.FromHours(start.Hours) + TimeSpan.FromMinutes(start.Minutes)) {
+                if (TimeSpan.FromHours(utc.Hour) + TimeSpan.FromMinutes(utc.Minute) < 
+                    TimeSpan.FromHours(end.Hours) + TimeSpan.FromMinutes(end.Minutes)) {
 
-                    return new MapRotation {
+                    mRotation.Add(new MapRotation {
                         GameMode = rot["rule"]["name"].ToString(),
+                        Time = UtcToLocal(start),
                         Maps = new Map[] {
                             new Map  {Name = rot["maps"][0].ToString()},
                             new Map  {Name = rot["maps"][1].ToString()}
                         }
-                    };
+                    });
                 }
             }
 
-            return null;
+            return mRotation;
+        }
+
+        private static string UtcToLocal(TimeSpan time) {
+            DateTime utc = new DateTime(time.Ticks);
+            DateTime local = utc.ToLocalTime();
+
+            return local.ToString("HH:mm");
         }
     }
 }

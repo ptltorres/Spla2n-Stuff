@@ -18,11 +18,10 @@ using Android.App;
 
 
 #if DEBUG
-[assembly: Application(Debuggable=true)]
+[assembly: Application(Debuggable = true)]
 #else
 [assembly: Application(Debuggable = false)]
 #endif
-
 
 // Version information for an assembly consists of the following four values:
 //
