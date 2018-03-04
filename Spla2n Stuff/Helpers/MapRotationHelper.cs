@@ -66,13 +66,17 @@ namespace Spla2n_Stuff.Helpers {
 
             var rotations = json["modes"][mode];
 
+            bool futureRotation = false;
+
             foreach (var rot in rotations) {
                 TimeSpan start = TimeSpan.FromSeconds((int)rot["startTime"]);
                 TimeSpan end = TimeSpan.FromSeconds((double)rot["endTime"]);
 
-                if (TimeSpan.FromHours(utc.Hour) + TimeSpan.FromMinutes(utc.Minute) < 
-                    TimeSpan.FromHours(end.Hours) + TimeSpan.FromMinutes(end.Minutes)) {
+                if (TimeSpan.FromHours(utc.Hour) >= TimeSpan.FromHours(start.Hours)) {
+                    futureRotation = true;
+                }
 
+                if (futureRotation) {
                     mRotation.Add(new MapRotation {
                         GameMode = rot["rule"]["name"].ToString(),
                         Time = UtcToLocal(start),
