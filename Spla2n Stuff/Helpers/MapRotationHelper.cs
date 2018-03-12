@@ -18,6 +18,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.IO;
 using ModernHttpClient;
+using Android.Util;
 
 namespace Spla2n_Stuff.Helpers {
 
@@ -94,6 +95,12 @@ namespace Spla2n_Stuff.Helpers {
         private static string UtcToLocal(TimeSpan time) {
             DateTime utc = new DateTime(time.Ticks);
             DateTime local = utc.ToLocalTime();
+
+            Log.Debug(TAG, "Time before: " + local);
+            if (TimeZoneInfo.Local.IsDaylightSavingTime(DateTime.Now)) {
+                local = local.AddHours(1);
+                Log.Debug(TAG, "Time after Daylight: " + local);
+            }
 
             return local.ToString("HH:mm");
         }
