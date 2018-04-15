@@ -83,7 +83,7 @@ namespace Spla2n_Stuff
             navigationView.NavigationItemSelected += HomeNavigationView_NavigationItemSelected;
 
 
-            var id = "ca-app-pub-1486333068830863~7686704947";
+            var id = KeysHelper.AdMob;
             Android.Gms.Ads.MobileAds.Initialize(this, id);
             var adView = FindViewById<AdView>(Resource.Id.adView);
             var adRequest = new AdRequest.Builder().Build();
