@@ -21,10 +21,10 @@ using Android.Support.Design.Widget;
 namespace Spla2n_Stuff
 {
     [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.DesignDemo")]
-    public class MainActivity : AppCompatActivity {
+    public class MainActivity : AppCompatActivity, View.IOnClickListener {
         private static string TAG = "MainActivity";
 
-        //DatabaseHelper dbHelper;
+        //Font
         private Typeface tf;
 
 
@@ -70,86 +70,57 @@ namespace Spla2n_Stuff
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-
+            // Set the toolbar
             var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(false);
             SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu_white);
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
 
             navigationView.NavigationItemSelected += HomeNavigationView_NavigationItemSelected;
 
-
+            // Set AdMob
             var id = KeysHelper.AdMob;
             Android.Gms.Ads.MobileAds.Initialize(this, id);
             var adView = FindViewById<AdView>(Resource.Id.adView);
             var adRequest = new AdRequest.Builder().Build();
             adView.LoadAd(adRequest);
 
-
+            // Prepare Database
             CopyDatabase("Spla2n.db");
 
+            // Font to be used in the activity
             tf = Typeface.CreateFromAsset(Assets, "Paintball.ttf");
 
-            
-            SetUpMapViews();
-
-            Task.Run(async () => {
-                regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
-                rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
-                leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
-
-
-                RunOnUiThread(() => {
-                    BindRegularMode();
-                    BindRankedMode();
-                    BindLeagueMode();
-                });      
-            });
-
-            upcomingRegularBtn.Click += delegate {
-                Intent activity;
-
-                activity = new Intent(this, typeof(MapRotationActivity));
-                activity.PutExtra("Mode", regular);
-                StartActivity(activity);
-            };
-
-            upcomingRankedBtn.Click += delegate {
-                Intent activity;
-
-                activity = new Intent(this, typeof(MapRotationActivity));
-                activity.PutExtra("Mode", ranked);
-                StartActivity(activity);
-            };
-
-            upcomingLeagueBtn.Click += delegate {
-                Intent activity;
-
-                activity = new Intent(this, typeof(MapRotationActivity));
-                activity.PutExtra("Mode", league);
-                StartActivity(activity);
-            };
-
+            // Setup the views
+            SetViews();
+            SetRotationImages();
         }
 
         protected override void OnResume() {
             base.OnResume();
+            SetRotationImages();
+        }
 
-            Task.Run(async () => {
-                regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
-                rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
-                leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
+        public void OnClick(View v) {
+            Intent activity = null;
 
-                RunOnUiThread(() => {
-                    BindRegularMode();
-                    BindRankedMode();
-                    BindLeagueMode();
-                });
-            });
+            if (v == upcomingRegularBtn) {
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", regular);
+            } else if (v == upcomingRankedBtn) {
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", ranked);
+            } else if (v == upcomingLeagueBtn) {
+                activity = new Intent(this, typeof(MapRotationActivity));
+                activity.PutExtra("Mode", league);
+            }
+
+            if (activity != null)
+                StartActivity(activity);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item) {
@@ -164,46 +135,45 @@ namespace Spla2n_Stuff
         private void HomeNavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e) {
             var menuItem = e.MenuItem;
             menuItem.SetChecked(!menuItem.IsChecked);
-            Intent intent;
-            Intent activity;
+            Intent activity = null;
 
-            switch (menuItem.ItemId) {
-                case Resource.Id.nav_abilities:
-                    intent = new Intent(this, typeof(AbilityActivity));
-                    StartActivity(intent);
-                    break;
-                case Resource.Id.nav_brands:
-                    intent = new Intent(this, typeof(BrandActivity));
-                    StartActivity(intent);
-                    break;
-                case Resource.Id.nav_headgear:
-                    activity = new Intent(this, typeof(GearActivity));
-                    activity.PutExtra("Type", "Headgear");
-                    StartActivity(activity);
-                    break;
-                case Resource.Id.nav_clothes:
-                    activity = new Intent(this, typeof(GearActivity));
-                    activity.PutExtra("Type", "Clothe");
-                    StartActivity(activity);
-                    break;
-                case Resource.Id.nav_shoes:
-                    activity = new Intent(this, typeof(GearActivity));
-                    activity.PutExtra("Type", "Shoe");
-                    StartActivity(activity);
-                    break;
-                case Resource.Id.nav_specials:
-                    intent = new Intent(this, typeof(SpecialActivity));
-                    StartActivity(intent);
-                    break;
-                case Resource.Id.nav_weapons:
-                    intent = new Intent(this, typeof(WeaponActivity));
-                    StartActivity(intent);
-                    break;
-                case Resource.Id.nav_subweapons:
-                    intent = new Intent(this, typeof(SubWeaponActivity));
-                    StartActivity(intent);
-                    break;
+            if (menuItem.ItemId == Resource.Id.nav_abilities) {
+                activity = new Intent(this, typeof(AbilityActivity));
+            } else if (menuItem.ItemId == Resource.Id.nav_brands) {
+                activity = new Intent(this, typeof(BrandActivity));
+            } else if (menuItem.ItemId == Resource.Id.nav_headgear) {
+                activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Headgear");
+            } else if (menuItem.ItemId == Resource.Id.nav_clothes) {
+                activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Clothe");
+            } else if (menuItem.ItemId == Resource.Id.nav_shoes) {
+                activity = new Intent(this, typeof(GearActivity));
+                activity.PutExtra("Type", "Shoe");
+            } else if (menuItem.ItemId == Resource.Id.nav_specials) {
+                activity = new Intent(this, typeof(SpecialActivity));
+            } else if (menuItem.ItemId == Resource.Id.nav_weapons) {
+                activity = new Intent(this, typeof(WeaponActivity));
+            } else if (menuItem.ItemId == Resource.Id.nav_subweapons) {
+                activity = new Intent(this, typeof(SubWeaponActivity));
             }
+
+            if (activity != null )
+                StartActivity(activity);
+        }
+
+        private void SetRotationImages() {
+            Task.Run(async () => {
+                regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
+                rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
+                leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
+
+                RunOnUiThread(() => {
+                    BindRegularMode();
+                    BindRankedMode();
+                    BindLeagueMode();
+                });
+            });
         }
 
         private void BindRegularMode() {
@@ -285,7 +255,7 @@ namespace Spla2n_Stuff
             }
         }
 
-        private void SetUpMapViews() {
+        private void SetViews() {
             regularTitle = FindViewById<TextView>(Resource.Id.regularModeTitle);
             regularTitle.SetTypeface(tf, TypefaceStyle.Bold);
             rankedTitle = FindViewById<TextView>(Resource.Id.rankedModeTitle);
@@ -323,12 +293,15 @@ namespace Spla2n_Stuff
             // Buttons setup
             upcomingRegularBtn = FindViewById<Button>(Resource.Id.upcomingStagesTurf);
             upcomingRegularBtn.SetTypeface(tf, TypefaceStyle.Normal);
+            upcomingRegularBtn.SetOnClickListener(this);
 
             upcomingRankedBtn = FindViewById<Button>(Resource.Id.upcomingStagesRanked);
             upcomingRankedBtn.SetTypeface(tf, TypefaceStyle.Normal);
+            upcomingRankedBtn.SetOnClickListener(this);
 
             upcomingLeagueBtn = FindViewById<Button>(Resource.Id.upcomingStagesLeague);
             upcomingLeagueBtn.SetTypeface(tf, TypefaceStyle.Normal);
+            upcomingLeagueBtn.SetOnClickListener(this);
         }
     }
 }

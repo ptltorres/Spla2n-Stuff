@@ -25,7 +25,6 @@ namespace Spla2n_Stuff.Helpers
             imageName = imageName.Replace(" ", "_").Replace(".", "_").Replace("'", "_").Replace("-","_")
                                 .Replace("(", "_").Replace(")", "_").Replace("&", "_").ToLower();
 
-            Log.Debug(tag, "Image name: " + imageName);
            return (int)typeof(Resource.Drawable).GetField(imageName).GetValue(null);
         }
     }

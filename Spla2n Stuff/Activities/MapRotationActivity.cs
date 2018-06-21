@@ -40,6 +40,7 @@ namespace Spla2n_Stuff {
 
             MapRotationAdapter adapter = new MapRotationAdapter(this, mapRotation, tf, mode);
             ListView list = FindViewById<ListView>(Resource.Id.abilityListView);
+            list.SetBackgroundResource(Resource.Drawable.background_image);
             list.Adapter = adapter;
         }
     }

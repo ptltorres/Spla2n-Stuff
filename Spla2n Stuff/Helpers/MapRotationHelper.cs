@@ -46,19 +46,6 @@ namespace Spla2n_Stuff.Helpers {
             return JObject.Parse(data);
         }
 
-        private static JObject GetJSONData() {
-            string data = "";
-
-            using (HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler())) {
-                using (HttpResponseMessage response = client.GetAsync(URL).Result) {
-                    using (HttpContent content = response.Content) {
-                        data = content.ReadAsStringAsync().Result;
-                    }
-                }
-            }
-            return JObject.Parse(data);
-        }
-
         private static List<MapRotation> GetRotationForBattleType(JObject json, string mode) {
             List<MapRotation> mRotation = new List<MapRotation>();
 
@@ -80,7 +67,7 @@ namespace Spla2n_Stuff.Helpers {
                 if (futureRotation) {
                     mRotation.Add(new MapRotation {
                         GameMode = rot["rule"]["name"].ToString(),
-                        Time = UtcToLocal(start),
+                        Time = UtcToLocal(start) + " - "  + UtcToLocal(end),
                         Maps = new Map[] {
                             new Map  {Name = rot["maps"][0].ToString()},
                             new Map  {Name = rot["maps"][1].ToString()}
