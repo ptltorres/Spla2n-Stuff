@@ -12,16 +12,25 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Spla2n_Stuff.Maps;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.V7.App;
+using Android.Support.V4.Widget;
+using Android.Support.Design.Widget;
+using Spla2n_Stuff.Activities;
 
 
 namespace Spla2n_Stuff {
-    [Activity(Label = "Upcoming Rotation", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
-    public class MapRotationActivity : Activity {
+    [Activity(Label = "Upcoming Rotation", ParentActivity = typeof(MainActivity), ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
+    public class MapRotationActivity : BaseActivity {
+        private const string mToolbarTitle = "Upcoming Rotation";
+
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
             SetContentView(Resource.Layout.Ability);
+
+            SetupToolbar(mToolbarTitle);
 
             // Setting fonts
             Typeface tf = Typeface.CreateFromAsset(Assets, "Paintball.ttf");

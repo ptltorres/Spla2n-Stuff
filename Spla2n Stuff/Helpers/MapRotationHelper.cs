@@ -83,10 +83,8 @@ namespace Spla2n_Stuff.Helpers {
             DateTime utc = new DateTime(time.Ticks);
             DateTime local = utc.ToLocalTime();
 
-            Log.Debug(TAG, "Time before: " + local);
             if (TimeZoneInfo.Local.IsDaylightSavingTime(DateTime.Now)) {
                 local = local.AddHours(1);
-                Log.Debug(TAG, "Time after Daylight: " + local);
             }
 
             return local.ToString("HH:mm");

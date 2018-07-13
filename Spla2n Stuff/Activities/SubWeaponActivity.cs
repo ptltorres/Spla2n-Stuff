@@ -13,15 +13,23 @@ using Android.Views;
 using Android.Widget;
 using Spla2n_Stuff.GearTypes;
 using Spla2n_Stuff.Helpers;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.V7.App;
+using Android.Support.V4.Widget;
+using Android.Support.Design.Widget;
+using Spla2n_Stuff.Activities;
 
 namespace Spla2n_Stuff {
-    [Activity(Label = "Sub Weapons", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
-    public class SubWeaponActivity : Activity {
+    [Activity(Label = "Sub Weapons", ParentActivity = typeof(MainActivity), ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
+    public class SubWeaponActivity : BaseActivity {
+        private const string mToolbarTitle = "Sub Weapons";
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
             SetContentView(Resource.Layout.Ability);
+
+            SetupToolbar(mToolbarTitle);
 
             // Setting fonts
             Typeface tf = Typeface.CreateFromAsset(Assets, "HelveticaNeue.ttf");
@@ -32,5 +40,6 @@ namespace Spla2n_Stuff {
             ListView list = FindViewById<ListView>(Resource.Id.abilityListView);
             list.Adapter = adapter;
         }
+
     }
 }

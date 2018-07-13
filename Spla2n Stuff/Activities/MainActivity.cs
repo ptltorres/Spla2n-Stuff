@@ -70,18 +70,8 @@ namespace Spla2n_Stuff
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Set the toolbar
-            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowTitleEnabled(false);
-            SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu_white);
-            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-
-            navigationView.NavigationItemSelected += HomeNavigationView_NavigationItemSelected;
-
+            SetupToolbar();
+           
             // Set AdMob
             var id = KeysHelper.AdMob;
             Android.Gms.Ads.MobileAds.Initialize(this, id);
@@ -160,6 +150,20 @@ namespace Spla2n_Stuff
 
             if (activity != null )
                 StartActivity(activity);
+        }
+
+        private void SetupToolbar() {
+            // Set the toolbar
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.mainActivityToolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowTitleEnabled(false);
+            SupportActionBar.SetHomeButtonEnabled(true);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu_white);
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+            navigationView.NavigationItemSelected += HomeNavigationView_NavigationItemSelected;
         }
 
         private void SetRotationImages() {
