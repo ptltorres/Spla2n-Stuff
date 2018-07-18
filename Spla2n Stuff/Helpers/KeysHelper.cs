@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace Spla2n_Stuff.Helpers {
     public static partial class KeysHelper {
+
         public static readonly string AdMob = "";
+        public static readonly string MapsURL = "";
+        public static readonly string NewsURL = "";
     }
 }

@@ -17,16 +17,15 @@ using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.IO;
-using ModernHttpClient;
 using Android.Util;
 
 namespace Spla2n_Stuff.Helpers {
 
     public class MapRotationHelper {
 
-        private static string URL = "https://splatoon.ink/schedule2.json";
+        private readonly static string URL = KeysHelper.MapsURL;
 
-        static string TAG = "MapRotationHelper";
+        static readonly string TAG = "MapRotationHelper";
 
         public static async Task<List<MapRotation>> GetMapRotationAsync(string mode) {
             JObject json = await GetJSONDataAsync();

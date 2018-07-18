@@ -14,10 +14,10 @@ using Spla2n_Stuff.GearTypes;
 using Android.Graphics;
 using Android.Content.Res;
 
-namespace Spla2n_Stuff
-{
-    public class CustomAdapter<T> : BaseAdapter<T>
-    {
+namespace Spla2n_Stuff {
+
+    public class CustomAdapter<T> : BaseAdapter<T> {
+
         private Activity context;
         private List<T> items;
         private Typeface typeface;
@@ -29,15 +29,9 @@ namespace Spla2n_Stuff
             this.typeface = typeface;
         }
 
-        public override T this[int position] {
-            get { return items[position]; }
-        }
+        public override T this[int position] => items[position]; 
 
-        public override int Count {
-            get {
-                return items.Count;
-            }
-        }
+        public override int Count => items.Count;
 
         public override Java.Lang.Object GetItem(int position) {
             return null;

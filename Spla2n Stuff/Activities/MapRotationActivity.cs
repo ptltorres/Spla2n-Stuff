@@ -39,12 +39,12 @@ namespace Spla2n_Stuff {
 
             List<MapRotation> mapRotation = null;
 
-            if (mode == MainActivity.regular) {
-                mapRotation = MainActivity.regularMapRotation;
+            if (mode == RotationFragment.regular) {
+                mapRotation = RotationFragment.regularMapRotation;
             } else if (mode == MainActivity.ranked) {
-                mapRotation = MainActivity.rankedMapRotation;
+                mapRotation = RotationFragment.rankedMapRotation;
             } else if (mode == MainActivity.league) {
-                mapRotation = MainActivity.leagueMapRotation;
+                mapRotation = RotationFragment.leagueMapRotation;
             }
 
             MapRotationAdapter adapter = new MapRotationAdapter(this, mapRotation, tf, mode);
