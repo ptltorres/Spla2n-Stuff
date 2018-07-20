@@ -32,16 +32,18 @@ namespace Spla2n_Stuff.Activities {
         private RecyclerView.LayoutManager mLayoutManager;
 
         public override void OnCreate(Bundle savedInstanceState) {
-            base.OnCreate(savedInstanceState);
-            mArticles = new List<NewsArticle>();
-            LoadNewsArticles();
+            base.OnCreate(savedInstanceState);           
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.Inflate(Resource.Layout.News_Fragment_Layout, container, false);
 
+            mArticles = new List<NewsArticle>();
+
             // Initializes the member variables of this fragment
             InitViews(view);
+
+            LoadNewsArticles();
 
             return view;
         }
@@ -70,9 +72,11 @@ namespace Spla2n_Stuff.Activities {
         private void LoadNewsArticles() => Task.Run(async () => { await NewsHelper.GetNewsArticlesAsync(this); });
 
         public void OnNewsLoaded(List<NewsArticle> newsArticles) {
-            mArticles.Clear();
-            mArticles.AddRange(newsArticles);
-            mAdapter.NotifyDataSetChanged();
+            Activity.RunOnUiThread(() => {
+                mArticles.Clear();
+                mArticles.AddRange(newsArticles);
+                mAdapter.NotifyDataSetChanged();
+            });
         }
     }
 }
