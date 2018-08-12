@@ -22,6 +22,7 @@ using Spla2n_Stuff.Activities;
 namespace Spla2n_Stuff {
     [Activity(Label = "Upcoming Rotation", ParentActivity = typeof(MainActivity), ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class MapRotationActivity : BaseActivity {
+
         private const string mToolbarTitle = "Upcoming Rotation";
 
         protected override void OnCreate(Bundle savedInstanceState) {
@@ -37,14 +38,14 @@ namespace Spla2n_Stuff {
 
             string mode = Intent.GetStringExtra("Mode");
 
-            List<MapRotation> mapRotation = null;
+            List<MapRotation> mapRotation = new List<MapRotation>();
 
             if (mode == RotationFragment.regular) {
-                mapRotation = RotationFragment.regularMapRotation;
+                mapRotation.AddRange(RotationFragment.regularMapRotation);
             } else if (mode == MainActivity.ranked) {
-                mapRotation = RotationFragment.rankedMapRotation;
+                mapRotation.AddRange(RotationFragment.rankedMapRotation);
             } else if (mode == MainActivity.league) {
-                mapRotation = RotationFragment.leagueMapRotation;
+                mapRotation.AddRange(RotationFragment.leagueMapRotation);
             }
 
             MapRotationAdapter adapter = new MapRotationAdapter(this, mapRotation, tf, mode);

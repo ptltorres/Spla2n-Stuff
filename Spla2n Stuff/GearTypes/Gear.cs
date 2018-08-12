@@ -10,9 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Spla2n_Stuff.GearTypes
-{
+namespace Spla2n_Stuff.GearTypes {
+
     public abstract class Gear {
+
         public int ImageID {get;set;}
         public int ID { get; set; }
         public Brand GearBrand { get; set; }

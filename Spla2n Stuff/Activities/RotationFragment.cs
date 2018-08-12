@@ -48,6 +48,8 @@ namespace Spla2n_Stuff.Activities {
         private ImageView leagueMap2Image;
         private Button upcomingLeagueBtn;
 
+        private bool mapsReady = false;
+
 
         // Lists for map rotations
         public static List<MapRotation> regularMapRotation;
@@ -66,6 +68,7 @@ namespace Spla2n_Stuff.Activities {
 
             // Font to be used in the activity
             tf = Typeface.CreateFromAsset(this.Context.Assets, "Paintball.ttf");
+
             // Setup the views
             SetViews(view);
             SetRotationImages();
@@ -135,21 +138,20 @@ namespace Spla2n_Stuff.Activities {
         }
 
         public void OnClick(View v) {
-            Intent activity = null;
+            Intent activity = new Intent(Activity, typeof(MapRotationActivity));
 
             if (v == upcomingRegularBtn) {
-                activity = new Intent(Activity, typeof(MapRotationActivity));
                 activity.PutExtra("Mode", regular);
             } else if (v == upcomingRankedBtn) {
-                activity = new Intent(Activity, typeof(MapRotationActivity));
                 activity.PutExtra("Mode", ranked);
             } else if (v == upcomingLeagueBtn) {
-                activity = new Intent(Activity, typeof(MapRotationActivity));
                 activity.PutExtra("Mode", league);
             }
 
-            if (activity != null)
+            if (mapsReady)
                 StartActivity(activity);
+            else
+                Toast.MakeText(Activity, "Please connect to a network and try again", ToastLength.Long).Show();
         }
 
         private void SetRotationImages() {
@@ -157,6 +159,8 @@ namespace Spla2n_Stuff.Activities {
                 regularMapRotation = await MapRotationHelper.GetMapRotationAsync(regular);
                 rankedMapRotation = await MapRotationHelper.GetMapRotationAsync(ranked);
                 leagueMapRotation = await MapRotationHelper.GetMapRotationAsync(league);
+
+                mapsReady = true;
 
                 if (Activity != null) {
                     Activity.RunOnUiThread(() => {

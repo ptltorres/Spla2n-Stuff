@@ -11,10 +11,10 @@ using Android.Views;
 using Android.Widget;
 using Spla2n_Stuff.Helpers;
 
-namespace Spla2n_Stuff.GearTypes
-{
-    public class Weapon
-    {
+namespace Spla2n_Stuff.GearTypes {
+
+    public class Weapon {
+
         public int ImageID { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }

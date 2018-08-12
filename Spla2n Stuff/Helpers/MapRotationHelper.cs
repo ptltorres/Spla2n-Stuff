@@ -23,9 +23,8 @@ namespace Spla2n_Stuff.Helpers {
 
     public class MapRotationHelper {
 
-        private readonly static string URL = KeysHelper.MapsURL;
-
-        static readonly string TAG = "MapRotationHelper";
+        private static readonly string URL = KeysHelper.MapsURL;
+        private static readonly string TAG = "MapRotationHelper";
 
         public static async Task<List<MapRotation>> GetMapRotationAsync(string mode) {
             JObject json = await GetJSONDataAsync();

@@ -27,9 +27,8 @@ namespace Spla2n_Stuff.Helpers {
             void OnNewsLoaded(List<NewsArticle> newsArticles);
         }
 
-        private readonly static string URL = KeysHelper.NewsURL;
-
-        static readonly string TAG = "NewsHelper";
+        private static readonly string URL = KeysHelper.NewsURL;
+        private static readonly string TAG = "NewsHelper";
 
         public static async Task GetNewsArticlesAsync(INewsCallback callback) {          
             JObject json = await GetJSONDataAsync();
@@ -62,6 +61,7 @@ namespace Spla2n_Stuff.Helpers {
                     Source       = (string)child.First["source"]
                 });              
             }
+
             articles.Reverse();
             return articles;
         }

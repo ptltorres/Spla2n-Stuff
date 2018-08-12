@@ -19,7 +19,8 @@ using Square.Picasso;
 namespace Spla2n_Stuff.Activities {
     [Activity(Label = "NewsDetailActivity", ParentActivity = typeof(MainActivity), ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.Custom")]
     public class NewsDetailActivity : AppCompatActivity {
-        static readonly string OBJECT_TRANSFER = "OBJECT_TRANSFER";
+
+        private static readonly string OBJECT_TRANSFER = "OBJECT_TRANSFER";
 
         private NewsArticle mArticle;
 

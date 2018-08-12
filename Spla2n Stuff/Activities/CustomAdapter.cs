@@ -19,9 +19,10 @@ namespace Spla2n_Stuff {
     public class CustomAdapter<T> : BaseAdapter<T> {
 
         private Activity context;
+        private View view;
         private List<T> items;
         private Typeface typeface;
-        private View view;
+        
 
         public CustomAdapter(Activity context, List<T> items, Typeface typeface) {
             this.context = context;
@@ -130,7 +131,7 @@ namespace Spla2n_Stuff {
             uncommonDesc.SetTypeface(typeface, TypefaceStyle.Normal);
         }
 
-        public void SetUpWeapons(int position, ViewGroup parent) {
+        private void SetUpWeapons(int position, ViewGroup parent) {
             view = context.LayoutInflater.Inflate(Resource.Layout.Weapon_Layout, parent, false);
 
             List<Weapon> weapons = items.Cast<Weapon>().ToList();
@@ -165,7 +166,7 @@ namespace Spla2n_Stuff {
             statsTextView.SetTypeface(typeface, TypefaceStyle.Normal);
         }
 
-        public void SetUpSubWeapons(int position, ViewGroup parent) {
+        private void SetUpSubWeapons(int position, ViewGroup parent) {
             view = context.LayoutInflater.Inflate(Resource.Layout.Ability_List, parent, false);
 
             List<SubWeapon> subs = items.Cast<SubWeapon>().ToList();
@@ -183,7 +184,7 @@ namespace Spla2n_Stuff {
             description.SetTypeface(typeface, TypefaceStyle.Normal);
         }
 
-        public void SetUpGear(int position, ViewGroup parent) {
+        private void SetUpGear(int position, ViewGroup parent) {
             view = context.LayoutInflater.Inflate(Resource.Layout.Gear_Layout, parent, false);
 
             List<Gear> gear = items.Cast<Gear>().ToList();

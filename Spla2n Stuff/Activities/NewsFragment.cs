@@ -22,8 +22,8 @@ using Newtonsoft.Json;
 namespace Spla2n_Stuff.Activities {
     public class NewsFragment : Android.Support.V4.App.Fragment, NewsHelper.INewsCallback, RecyclerItemClickListener.IOnRecyclerClickListener {
 
-        static readonly string TAG = "NewsFragment";
-        static readonly string OBJECT_TRANSFER = "OBJECT_TRANSFER";
+        private static readonly string TAG = "NewsFragment";
+        private static readonly string OBJECT_TRANSFER = "OBJECT_TRANSFER";
 
         List<NewsArticle> mArticles;
 
@@ -59,17 +59,11 @@ namespace Spla2n_Stuff.Activities {
             mRecyclerView.SetAdapter(mAdapter);
         }
 
-        public void OnItemClick(View view, int position) {
-            Intent intent = new Intent(this.Context, typeof(NewsDetailActivity));
-            intent.PutExtra(OBJECT_TRANSFER, JsonConvert.SerializeObject(mAdapter.GetArticle(position)));
-            StartActivity(intent);
+        private void LoadNewsArticles() {
+            Task.Run(async () => {
+                await NewsHelper.GetNewsArticlesAsync(this);
+            });
         }
-
-        public void OnItemLongClick(View view, int position) {
-            //Toast.MakeText(this.Context, "OnItemLongClick at pos " + position, ToastLength.Long).Show();
-        }
-
-        private void LoadNewsArticles() => Task.Run(async () => { await NewsHelper.GetNewsArticlesAsync(this); });
 
         public void OnNewsLoaded(List<NewsArticle> newsArticles) {
             Activity.RunOnUiThread(() => {
@@ -77,6 +71,16 @@ namespace Spla2n_Stuff.Activities {
                 mArticles.AddRange(newsArticles);
                 mAdapter.NotifyDataSetChanged();
             });
+        }
+
+        public void OnItemClick(View view, int position) {
+            Intent intent = new Intent(this.Context, typeof(NewsDetailActivity));
+            intent.PutExtra(OBJECT_TRANSFER, JsonConvert.SerializeObject(mAdapter.GetArticle(position)));
+            StartActivity(intent);
+        }
+
+        public void OnItemLongClick(View view, int position) {
+            // No implementation as for now :-(
         }
     }
 }

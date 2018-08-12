@@ -12,10 +12,10 @@ using Android.Widget;
 using Android.Content.Res;
 using Spla2n_Stuff.Helpers;
 
-namespace Spla2n_Stuff.GearTypes
-{
-    public class Special
-    {
+namespace Spla2n_Stuff.GearTypes {
+
+    public class Special {
+
         public int ImageID { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }

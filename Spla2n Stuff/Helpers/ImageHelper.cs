@@ -11,11 +11,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace Spla2n_Stuff.Helpers
-{
-    public static class ImageHelper
-    {
-        public static string tag = "ImageHelper";
+namespace Spla2n_Stuff.Helpers {
+
+    public static class ImageHelper {
 
         public static int GetImageId(string imageName) {
             if (Char.IsDigit(imageName[0])) {

@@ -11,10 +11,10 @@ using Android.Views;
 using Android.Widget;
 using Spla2n_Stuff.Helpers;
 
-namespace Spla2n_Stuff.GearTypes
-{
-    public class Shoe : Gear
-    {
+namespace Spla2n_Stuff.GearTypes {
+
+    public class Shoe : Gear {
+
         public Shoe(int id, string name, string rarity) {
             this.ID = id;
             this.Name = name;

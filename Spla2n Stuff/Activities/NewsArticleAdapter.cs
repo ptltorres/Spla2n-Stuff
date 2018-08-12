@@ -17,11 +17,6 @@ using Square.Picasso;
 namespace Spla2n_Stuff.Activities {
     public class NewsArticleAdapter : RecyclerView.Adapter {
 
-        // List of articles
-        private List<NewsArticle> mArticles;
-
-        private Context mContext;
-
         // ViewHolder class
         private class ViewHolder : RecyclerView.ViewHolder {
             public ImageView entryImage;
@@ -33,6 +28,10 @@ namespace Spla2n_Stuff.Activities {
                 entryContent = view.FindViewById<TextView>(Resource.Id.entryContent);
             }
         }
+
+        // List of articles
+        private List<NewsArticle> mArticles;
+        private Context mContext;
 
         public NewsArticleAdapter(Context context,List<NewsArticle> articles) {
             mContext = context;

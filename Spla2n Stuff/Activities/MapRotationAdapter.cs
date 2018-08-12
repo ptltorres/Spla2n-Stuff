@@ -20,6 +20,7 @@ using Android.Graphics;
 namespace Spla2n_Stuff {
 
     public class MapRotationAdapter : BaseAdapter {
+
         private Activity context;
         private List<MapRotation> items;
         private Typeface typeface;

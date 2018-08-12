@@ -16,8 +16,7 @@ using Android.Views;
 
 namespace Spla2n_Stuff.Activities {
     public class RecyclerItemClickListener : RecyclerView.SimpleOnItemTouchListener {
-        private static readonly string TAG = "RecyclerItemClickListen";
-
+       
         public interface IOnRecyclerClickListener {
             void OnItemClick(View view, int position);
             void OnItemLongClick(View view, int position);
@@ -49,6 +48,7 @@ namespace Spla2n_Stuff.Activities {
             }
         }
 
+        private static readonly string TAG = "RecyclerItemClickListen";
 
         private IOnRecyclerClickListener mListener;
         private GestureDetectorCompat mGestureDetector;

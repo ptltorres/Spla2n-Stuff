@@ -11,10 +11,10 @@ using Android.Views;
 using Android.Widget;
 using Spla2n_Stuff.Helpers;
 
-namespace Spla2n_Stuff.GearTypes
-{
-    public class Ability
-    {
+namespace Spla2n_Stuff.GearTypes {
+
+    public class Ability {
+
         public int ImageID { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }
@@ -25,7 +25,6 @@ namespace Spla2n_Stuff.GearTypes
             this.Name = name;
             this.Description = desc;
 
-            //System.Diagnostics.Debug.WriteLine("Image name in Ability Constructor: " + Name.Replace(" ", "_").ToLower());
             ImageID = ImageHelper.GetImageId(this.Name);
         }
     }
