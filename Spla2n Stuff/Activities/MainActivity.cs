@@ -22,13 +22,17 @@ using Android.Support.V7.App;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Spla2n_Stuff.Activities;
+using Android.Util;
+using Android.Preferences;
 
 namespace Spla2n_Stuff
 {
     [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : AppCompatActivity {
-        //private static string TAG = "MainActivity";
-     
+
+        private static string dbName = "Spla2n.db";
+        private static readonly string FIRST_TIME_KEY = "FIRST_TIME";
+
         private DrawerLayout drawerLayout;
         private NavigationView navigationView;
 
@@ -44,11 +48,16 @@ namespace Spla2n_Stuff
 
             SetupToolbar();
             SetupTabs();
-          
 
-            // Prepare Database
-            CopyDatabase("Spla2n.db");
-          
+            // Prepare Database. Executes only the first time app is used after installation
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+            if (!prefs.GetBoolean(FIRST_TIME_KEY, false)) {
+                CopyDatabase(dbName);
+                // Mark first time has ran
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutBoolean(FIRST_TIME_KEY, true);
+                editor.Commit();
+            }       
         }
 
         protected override void OnResume() {
@@ -122,7 +131,7 @@ namespace Spla2n_Stuff
                 StartActivity(activity);
         }
 
-        
+        // Copies the App's database into the device
         private void CopyDatabase(string dataBaseName) {
             var dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dataBaseName);
 

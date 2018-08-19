@@ -36,7 +36,6 @@ namespace Spla2n_Stuff.Helpers {
 
 
         private static async Task<JObject> GetJSONDataAsync() {
-            Android.Util.Log.Debug(TAG, "Getting JSON data");
             HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler());
 
             string data = await client.GetStringAsync(URL);
