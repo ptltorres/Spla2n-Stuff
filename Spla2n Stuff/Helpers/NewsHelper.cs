@@ -32,17 +32,13 @@ namespace Spla2n_Stuff.Helpers {
 
         public static async Task GetNewsArticlesAsync(INewsCallback callback) {          
             JObject json = await GetJSONDataAsync();
-
             List<NewsArticle> newsList = GetNewsArticlesList(json);
-
             callback.OnNewsLoaded(newsList);         
         }
 
         private static async Task<JObject> GetJSONDataAsync() {
             HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler());
-
             string data = await client.GetStringAsync(URL);
-
             return JObject.Parse(data);
         }
 

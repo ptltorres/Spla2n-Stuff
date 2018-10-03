@@ -142,27 +142,27 @@ namespace Spla2n_Stuff {
             TextView weaponTitle = view.FindViewById<TextView>(Resource.Id.weaponTitle);
             TextView subTitle = view.FindViewById<TextView>(Resource.Id.subTitle);
             ImageView subImage = view.FindViewById<ImageView>(Resource.Id.imageSub);
-            TextView subDescription = view.FindViewById<TextView>(Resource.Id.subDescription);
+
             TextView specialTitle = view.FindViewById<TextView>(Resource.Id.specialTitle);
             ImageView specialImage = view.FindViewById<ImageView>(Resource.Id.imageSpecial);
-            TextView specialDescription = view.FindViewById<TextView>(Resource.Id.specialDescription);
+
             TextView statsTextView = view.FindViewById<TextView>(Resource.Id.stats);
 
             weaponImage.SetImageResource(weapons[position].ImageID);
             weaponTitle.Text = weapons[position].Name;
             subTitle.Text = weapons[position].WeaponSub.Name;
             subImage.SetImageResource(weapons[position].WeaponSub.ImageID);
-            subDescription.Text = weapons[position].WeaponSub.Description;
+
             specialTitle.Text = weapons[position].WeaponSpecial.Name;
             specialImage.SetImageResource(weapons[position].WeaponSpecial.ImageID);
-            specialDescription.Text = weapons[position].WeaponSpecial.Description;
+
             statsTextView.Text = stats;
 
             weaponTitle.SetTypeface(typeface, TypefaceStyle.Bold);
             subTitle.SetTypeface(typeface, TypefaceStyle.Bold);
-            subDescription.SetTypeface(typeface, TypefaceStyle.Normal);
+
             specialTitle.SetTypeface(typeface, TypefaceStyle.Bold);
-            specialDescription.SetTypeface(typeface, TypefaceStyle.Normal);
+
             statsTextView.SetTypeface(typeface, TypefaceStyle.Normal);
         }
 
