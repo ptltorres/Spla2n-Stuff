@@ -29,7 +29,7 @@ namespace Spla2n_Stuff
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Ability);
+            SetContentView(Resource.Layout.ListView_Activity_Layout);
 
             SetupToolbar(mToolbarTitle);
             // Setting fonts

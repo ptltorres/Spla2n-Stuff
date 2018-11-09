@@ -50,7 +50,6 @@ namespace Spla2n_Stuff.Activities {
 
         private bool mapsReady = false;
 
-
         // Lists for map rotations
         public static List<MapRotation> regularMapRotation;
         public static List<MapRotation> rankedMapRotation;

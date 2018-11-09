@@ -218,7 +218,7 @@
     <AndroidResource Include="Resources\layout\Ability_List.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Ability.axml">
+    <AndroidResource Include="Resources\layout\ListView_Activity_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Brand_Layout.axml">

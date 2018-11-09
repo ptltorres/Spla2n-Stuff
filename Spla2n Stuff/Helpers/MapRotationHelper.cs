@@ -28,18 +28,14 @@ namespace Spla2n_Stuff.Helpers {
 
         public static async Task<List<MapRotation>> GetMapRotationAsync(string mode) {
             JObject json = await GetJSONDataAsync();
-
             List<MapRotation> mapRotation = GetRotationForBattleType(json, mode);
-
             return mapRotation;
         }
 
 
         private static async Task<JObject> GetJSONDataAsync() {
             HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler());
-
             string data = await client.GetStringAsync(URL);
-
             return JObject.Parse(data);
         }
 
@@ -55,7 +51,7 @@ namespace Spla2n_Stuff.Helpers {
 
             foreach (var rot in rotations) {
                 TimeSpan start = TimeSpan.FromSeconds((int)rot["startTime"]);
-                TimeSpan end = TimeSpan.FromSeconds((double)rot["endTime"]);
+                TimeSpan end = TimeSpan.FromSeconds((int)rot["endTime"]);
 
                 if (TimeSpan.FromHours(utc.Hour) >= TimeSpan.FromHours(start.Hours)) {
                     futureRotation = true;

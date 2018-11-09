@@ -17,7 +17,7 @@ namespace Spla2n_Stuff.Maps {
         public Map[] Maps { get; set; }
 
         public override string ToString() {
-            return GameMode + ": {" + Maps[0].Name + ", " + Maps[1].Name+ "}";
+            return GameMode + ": {" + Maps[0].Name + ", " + Maps[1].Name+ "}, Time: " + Time;
         }
     }
 }

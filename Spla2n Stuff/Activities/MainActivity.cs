@@ -30,7 +30,7 @@ namespace Spla2n_Stuff
     [Activity(Label = "Spla2n Stuff", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : AppCompatActivity {
 
-        private static string dbName = "Spla2n.db";
+        private static readonly string dbName = "Spla2n.db";
         private static readonly string FIRST_TIME_KEY = "FIRST_TIME";
 
         private DrawerLayout drawerLayout;
@@ -53,7 +53,7 @@ namespace Spla2n_Stuff
             ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
             if (!prefs.GetBoolean(FIRST_TIME_KEY, false)) {
                 CopyDatabase(dbName);
-                // Mark first time has ran
+                // Mark first time has run
                 ISharedPreferencesEditor editor = prefs.Edit();
                 editor.PutBoolean(FIRST_TIME_KEY, true);
                 editor.Commit();

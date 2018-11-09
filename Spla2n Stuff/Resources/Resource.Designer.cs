@@ -3809,8 +3809,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0032
 			public const int ALT = 2131427378;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int ActivityToolbar = 2131427481;
+			// aapt resource value: 0x7f0b00b4
+			public const int ActivityToolbar = 2131427508;
 			
 			// aapt resource value: 0x7f0b0033
 			public const int CTRL = 2131427379;
@@ -3827,14 +3827,14 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0037
 			public const int SYM = 2131427383;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int abilityDescription = 2131427485;
-			
 			// aapt resource value: 0x7f0b009a
-			public const int abilityListView = 2131427482;
+			public const int abilityDescription = 2131427482;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int abilityTitle = 2131427484;
+			// aapt resource value: 0x7f0b00b5
+			public const int abilityListView = 2131427509;
+			
+			// aapt resource value: 0x7f0b0099
+			public const int abilityTitle = 2131427481;
 			
 			// aapt resource value: 0x7f0b00cc
 			public const int action0 = 2131427532;
@@ -3929,11 +3929,11 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b003d
 			public const int bottom = 2131427389;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int brandName = 2131427509;
+			// aapt resource value: 0x7f0b00b2
+			public const int brandName = 2131427506;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int brandTitle = 2131427486;
+			// aapt resource value: 0x7f0b009b
+			public const int brandTitle = 2131427483;
 			
 			// aapt resource value: 0x7f0b0070
 			public const int buttonPanel = 2131427440;
@@ -3968,20 +3968,20 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0039
 			public const int collapseActionView = 2131427385;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int commonDescription = 2131427489;
+			// aapt resource value: 0x7f0b009e
+			public const int commonDescription = 2131427486;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int commonTitle = 2131427487;
+			// aapt resource value: 0x7f0b009c
+			public const int commonTitle = 2131427484;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int container = 2131427495;
+			// aapt resource value: 0x7f0b00a4
+			public const int container = 2131427492;
 			
 			// aapt resource value: 0x7f0b0073
 			public const int contentPanel = 2131427443;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int coordinator = 2131427496;
+			// aapt resource value: 0x7f0b00a5
+			public const int coordinator = 2131427493;
 			
 			// aapt resource value: 0x7f0b007a
 			public const int custom = 2131427450;
@@ -3995,20 +3995,20 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b006d
 			public const int default_activity_button = 2131427437;
 			
-			// aapt resource value: 0x7f0b00aa
-			public const int design_bottom_sheet = 2131427498;
-			
-			// aapt resource value: 0x7f0b00b1
-			public const int design_menu_item_action_area = 2131427505;
-			
-			// aapt resource value: 0x7f0b00b0
-			public const int design_menu_item_action_area_stub = 2131427504;
-			
-			// aapt resource value: 0x7f0b00af
-			public const int design_menu_item_text = 2131427503;
+			// aapt resource value: 0x7f0b00a7
+			public const int design_bottom_sheet = 2131427495;
 			
 			// aapt resource value: 0x7f0b00ae
-			public const int design_navigation_view = 2131427502;
+			public const int design_menu_item_action_area = 2131427502;
+			
+			// aapt resource value: 0x7f0b00ad
+			public const int design_menu_item_action_area_stub = 2131427501;
+			
+			// aapt resource value: 0x7f0b00ac
+			public const int design_menu_item_text = 2131427500;
+			
+			// aapt resource value: 0x7f0b00ab
+			public const int design_navigation_view = 2131427499;
 			
 			// aapt resource value: 0x7f0b0060
 			public const int dimensions = 2131427424;
@@ -4076,8 +4076,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0065
 			public const int forever = 2131427429;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int gearTitle = 2131427507;
+			// aapt resource value: 0x7f0b00b0
+			public const int gearTitle = 2131427504;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int ghost_view = 2131427338;
@@ -4103,11 +4103,11 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b006c
 			public const int image = 2131427436;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int imageBrand = 2131427508;
+			// aapt resource value: 0x7f0b00b1
+			public const int imageBrand = 2131427505;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int imageCommon = 2131427488;
+			// aapt resource value: 0x7f0b009d
+			public const int imageCommon = 2131427485;
 			
 			// aapt resource value: 0x7f0b00f9
 			public const int imageSpecial = 2131427577;
@@ -4115,11 +4115,11 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b00f7
 			public const int imageSub = 2131427575;
 			
-			// aapt resource value: 0x7f0b00a3
-			public const int imageUncommon = 2131427491;
+			// aapt resource value: 0x7f0b00a0
+			public const int imageUncommon = 2131427488;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int imageView1 = 2131427483;
+			// aapt resource value: 0x7f0b0098
+			public const int imageView1 = 2131427480;
 			
 			// aapt resource value: 0x7f0b00d6
 			public const int info = 2131427542;
@@ -4133,8 +4133,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0000
 			public const int item_touch_helper_previous_elevation = 2131427328;
 			
-			// aapt resource value: 0x7f0b00a6
-			public const int largeLabel = 2131427494;
+			// aapt resource value: 0x7f0b00a3
+			public const int largeLabel = 2131427491;
 			
 			// aapt resource value: 0x7f0b00ee
 			public const int league1Image = 2131427566;
@@ -4166,8 +4166,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b001d
 			public const int listMode = 2131427357;
 			
-			// aapt resource value: 0x7f0b0098
-			public const int listViewLayout = 2131427480;
+			// aapt resource value: 0x7f0b00b3
+			public const int listViewLayout = 2131427507;
 			
 			// aapt resource value: 0x7f0b006e
 			public const int list_item = 2131427438;
@@ -4238,8 +4238,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0103
 			public const int nav_weapons = 2131427587;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int navigation_header_container = 2131427501;
+			// aapt resource value: 0x7f0b00aa
+			public const int navigation_header_container = 2131427498;
 			
 			// aapt resource value: 0x7f0b003b
 			public const int never = 2131427387;
@@ -4415,14 +4415,14 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0025
 			public const int showTitle = 2131427365;
 			
-			// aapt resource value: 0x7f0b00a5
-			public const int smallLabel = 2131427493;
+			// aapt resource value: 0x7f0b00a2
+			public const int smallLabel = 2131427490;
 			
-			// aapt resource value: 0x7f0b00ac
-			public const int snackbar_action = 2131427500;
+			// aapt resource value: 0x7f0b00a9
+			public const int snackbar_action = 2131427497;
 			
-			// aapt resource value: 0x7f0b00ab
-			public const int snackbar_text = 2131427499;
+			// aapt resource value: 0x7f0b00a8
+			public const int snackbar_text = 2131427496;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int snap = 2131427395;
@@ -4493,8 +4493,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0076
 			public const int textSpacerNoTitle = 2131427446;
 			
-			// aapt resource value: 0x7f0b00b2
-			public const int text_input_password_toggle = 2131427506;
+			// aapt resource value: 0x7f0b00af
+			public const int text_input_password_toggle = 2131427503;
 			
 			// aapt resource value: 0x7f0b0014
 			public const int textinput_counter = 2131427348;
@@ -4529,8 +4529,8 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b007b
 			public const int topPanel = 2131427451;
 			
-			// aapt resource value: 0x7f0b00a9
-			public const int touch_outside = 2131427497;
+			// aapt resource value: 0x7f0b00a6
+			public const int touch_outside = 2131427494;
 			
 			// aapt resource value: 0x7f0b000f
 			public const int transition_current_scene = 2131427343;
@@ -4547,11 +4547,11 @@ namespace Spla2n_Stuff
 			// aapt resource value: 0x7f0b0013
 			public const int transition_transform = 2131427347;
 			
-			// aapt resource value: 0x7f0b00a4
-			public const int uncommonDescription = 2131427492;
+			// aapt resource value: 0x7f0b00a1
+			public const int uncommonDescription = 2131427489;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int uncommonTitle = 2131427490;
+			// aapt resource value: 0x7f0b009f
+			public const int uncommonTitle = 2131427487;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int uniform = 2131427373;
@@ -4727,58 +4727,58 @@ namespace Spla2n_Stuff
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int Ability = 2130968602;
+			public const int Ability_List = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int Ability_List = 2130968603;
+			public const int Brand_Layout = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int Brand_Layout = 2130968604;
+			public const int design_bottom_navigation_item = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_bottom_navigation_item = 2130968605;
+			public const int design_bottom_sheet_dialog = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_bottom_sheet_dialog = 2130968606;
+			public const int design_layout_snackbar = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_snackbar = 2130968607;
+			public const int design_layout_snackbar_include = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_layout_snackbar_include = 2130968608;
+			public const int design_layout_tab_icon = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_layout_tab_icon = 2130968609;
+			public const int design_layout_tab_text = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_layout_tab_text = 2130968610;
+			public const int design_menu_item_action_area = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_menu_item_action_area = 2130968611;
+			public const int design_navigation_item = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item = 2130968612;
+			public const int design_navigation_item_header = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_item_header = 2130968613;
+			public const int design_navigation_item_separator = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_item_separator = 2130968614;
+			public const int design_navigation_item_subheader = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_item_subheader = 2130968615;
+			public const int design_navigation_menu = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_navigation_menu = 2130968616;
+			public const int design_navigation_menu_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int design_navigation_menu_item = 2130968617;
+			public const int design_text_input_password_icon = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int design_text_input_password_icon = 2130968618;
+			public const int Gear_Layout = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int Gear_Layout = 2130968619;
+			public const int ListView_Activity_Layout = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
 			public const int Main = 2130968620;

@@ -24,10 +24,9 @@ namespace Spla2n_Stuff.Helpers
         private static string DbName = "Spla2n.db";
         private static string DbPath;
 
-        private static SqliteConnection database; //db connection
+        private static SqliteConnection database;
         private static SqliteCommand com;
 
-        // List of gear vars
         private static List<Ability> abilities;
         private static List<Brand> brands;
         private static List<SubWeapon> subWeapons;
